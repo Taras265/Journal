@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load secretaries_tags %}
+
+{% block content %}
+{% if request.user|secretary %}
+<h1>Видалиння</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <form action="" method="post">{% csrf_token %}
+                <h5>Ви хотите видалити '{{ object }}'?</h5>
+                <button class="btn btn-danger">Видалити</button>
+            </form>
+        </div>
+    </div>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

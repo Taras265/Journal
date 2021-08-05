@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load secretaries_tags %}
+
+{% block content %}
+{% if request.user|secretary %}
+    <div class="row">
+        <div class="col-md">
+            <h1>Вчителі класів</h1>
+            <div class="row col-md">
+                <form action="" method="post" class="d-flex">{% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Шукати</button>
+                </form>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                      <th scope="col">Номер класу</th>
+                      <th scope="col">Предмети</th>
+                      <th scope="col">Вчителі</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for class in class_teachers %}
+                      <tr>
+                          <td>
+                            {{ class.journal_id }}
+                          </td>
+                          <td>
+                              {% for subject in class|class_subject %}
+                              <p class="pb-3">{{subject}}</p>
+                              {% endfor %}
+                          </td>
+                          <td>
+                              {% for subject in class|class_subject %}
+                              <p class="pb-3">{{ subject.id|get_teacher:class.journal_id.id }}</p>
+                              <p></p>
+                              {% endfor %}
+                          </td>
+                          <td>
+                              {% for subject in class|class_subject %}
+                              {% if subject.id|teacher_filter:class.journal_id.id %}
+                                <a href="{% url 'secretaries:refactor_teacher_class' pk=subject.id|get_teacher_id:class.journal_id.id %}">
+                                    <button type="submit" class="btn btn-primary">Редагувати вчителя</button>
+                                    <p></p>
+                                </a>
+                              {% else %}
+                                <a href="{% url 'secretaries:add_teacher_to_class' %}">
+                                    <button type="submit" class="btn btn-primary">Додати вчителя</button>
+                                    <p></p>
+                                </a>
+                              {% endif %}
+                              {% endfor %}
+                          </td>
+                          <td>
+                              {% for subject in class|class_subject %}
+                              {% if subject.id|teacher_filter:class.journal_id.id %}
+                                <a href="{% url 'secretaries:delete_class_teacher' pk=subject.id|get_teacher_id:class.journal_id.id %}">
+                                    <button type="submit" class="btn btn-danger">Видалити вчителя</button>
+                                    <p></p>
+                                </a>
+                              {% else %}
+                                <a href="{% url 'secretaries:add_teacher_to_class' %}">
+                                    <button type="submit" class="btn btn-primary">Додати вчителя</button>
+                                    <p></p>
+                                </a>
+                              {% endif %}
+                              {% endfor %}
+                          </td>
+                      </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

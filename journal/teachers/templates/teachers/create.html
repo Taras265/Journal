@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load teachers_tags %}
+
+{% block content %}
+{% if request.user|teacher %}
+<h1 class="col-md-8 mx-auto my-4">Додання</h1>
+<div class="col-md-8 mx-auto">
+    {% include "form.html" with button="Додати" %}
+</div>>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

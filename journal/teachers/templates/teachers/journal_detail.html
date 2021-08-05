@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load teachers_tags %}
+
+{% block content %}
+{% if request.user|teacher %}
+    {% if form|form %}
+    <div class="alert alert-success" role="alert">
+        {% include "form.html" with button="Додати" action="add/mark/" %}
+    </div>
+    {% endif %}
+    <h1>Журнал {{object.journal_id}}</h1>
+    <form method="post" action="add/topic/"> {% csrf_token %}
+          <input type="hidden" name="class_teacher" value="{{ object.id }}">
+          <button type="submit" class="btn btn-primary">Нова тема</button>
+    </form>
+    <table class="table table-bordered table-striped">
+        <thead>
+    <tr>
+      <th scope="col">Учень</th>
+      {% for date in dates %}
+        <th scope="col">{{date|date:"d.m.y"}}</th>
+      {% endfor %}
+        {% if dates|date_filter %}
+        <th scope="col">Сьогодні</th>
+        {% endif %}
+    </tr>
+  </thead>
+  <tbody>
+      {% for student in students %}
+      <tr>
+      <th scope="row">{{student}}</th>
+      {% for date in dates %}
+      {% if date|mark_filter:student %}
+        <td>{{date|get_simple_mark:student}}</td>
+      {% else %}
+        <td>
+          <form method="post"> {% csrf_token %}
+          <input type="hidden" name="student" value="{{ student.id }}">
+          <input type="hidden" name="date" value="{{date|date:'d.m.Y'}}">
+          <input type="hidden" name="teacher" value="{{ object.id }}">
+          <input type="hidden" name="subject" value="{{ object.subject_id.id }}">
+          <button type="submit" class="btn btn-light">---</button>
+          </form>
+        </td>
+      {% endif %}
+      {% endfor %}
+      {% if dates|date_filter %}
+        <td>
+          <form method="post"> {% csrf_token %}
+          <input type="hidden" name="student" value="{{ student.id }}">
+          <input type="hidden" name="date" value="{{object|date_today}}">
+          <input type="hidden" name="teacher" value="{{ object.id }}">
+          <input type="hidden" name="subject" value="{{ object.subject_id.id }}">
+          <button type="submit" class="btn btn-light">---</button>
+          </form>
+        </td>
+      {% endif %}
+      </tr>
+      {% endfor %}
+  </tbody>
+    </table>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load secretaries_tags %}
+
+{% block content %}
+{% if request.user|secretary %}
+    <div class="row">
+        <div class="col-md">
+            <h1>Вчителі</h1>
+            <div class="row col-md">
+                <form action="" method="post" class="d-flex">{% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Шукати</button>
+                </form>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                      <th scope="col">Логін</th>
+                      <th scope="col">Iм'я</th>
+                      <th scope="col">Прізвище</th>
+                      <th scope="col">По батькові</th>
+                      <th scope="col">Дата народження</th>
+                      <th scope="col">Адреса</th>
+                      <th scope="col">Предмети</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for object in page_obj %}
+                      <tr>
+                          <td>
+                            {{ object.teacher_id.user_id }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.name }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.so_name }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.second_name }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.date }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.address }}
+                        </td>
+                        <td>{% for subject in object.subjects.all %}
+                            <p>{{subject}}</p>
+                        {% endfor %}</td>
+                          <td>
+                              <a href="{% url 'secretaries:refactor_teacher' pk=object.teacher_id.pk %}">
+                                <button type="submit" class="btn btn-primary">Редагувати інформацію</button>
+                              </a>
+                          </td>
+                          <td>
+                              <a href="{% url 'secretaries:refactor_subjects' pk=object.pk %}">
+                                <button type="submit" class="btn btn-primary">Редагувати предмети</button>
+                              </a>
+                          </td>
+                          <td>
+                              <a href="{% url 'secretaries:delete_user' pk=object.teacher_id.user_id.id %}">
+                                <button type="submit" class="btn btn-danger">Видалити</button>
+                              </a>
+                          </td>
+                      </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          {% for page in page_obj.paginator.page_range %}
+            <li class="page-item"><a class="page-link" href="?page={{page}}">{{page}}</a></li>
+            <li class="page-item"></li>
+          {% endfor %}
+        </li>
+      </ul>
+    </nav>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

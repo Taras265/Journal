@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load secretaries_tags %}
+
+{% block content %}
+{% if request.user|secretary %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h4 class="card-title">Додати</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <a class="list-group-item"
+       href="{% url 'secretaries:add_teacher' %}">Додати вчителя</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:add_teacher_info' %}">Додати інформацію вчителю</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:add_teacher_subjects' %}">Додати предмети вчителю</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:add_subject' %}">Додати предмет</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:add_student' %}">Додати учня</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:add_student_info' %}">Додати інформацію учню</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:add_journal' %}">Додати журнал</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:add_class_subjects' %}">Додати предмети класу</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:add_teacher_to_class' %}">Додати вчителя класу</a>
+  </ul>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h4 class="card-title">Переглянути</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <a class="list-group-item"
+       href="{% url 'secretaries:teacher_list' %}">Переглянути вчителів</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:subject_list' %}">Переглянути предмети</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:student_list' %}">Переглянути учнів</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:journal_list' %}">Переглянути журнали</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:class_subjects_list' %}">Переглянути предмети паралелей</a>
+    <a class="list-group-item"
+       href="{% url 'secretaries:class_teacher_list' %}">Переглянути вчителів класу</a>
+  </ul>
+</div>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

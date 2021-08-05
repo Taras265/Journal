@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load teachers_tags %}
+
+{% block content %}
+{% if request.user|teacher %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h4 class="card-title">Журнали</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    {% for journal in journals %}
+    <a class="list-group-item"
+       href="{% url 'teachers:journal_marks' pk=journal.pk %}">{{journal.journal_id}} - {{journal.subject_id}}</a>
+    {% endfor %}
+  </ul>
+</div>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

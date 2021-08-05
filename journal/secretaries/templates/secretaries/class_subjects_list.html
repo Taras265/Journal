@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load secretaries_tags %}
+
+{% block content %}
+{% if request.user|secretary %}
+    <div class="row">
+        <div class="col-md">
+            <h1>Предмети паралелей</h1>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                      <th scope="col">Паралель</th>
+                      <th scope="col">Предмети</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for object in object_list %}
+                      <tr>
+                        <td>
+                            {{ object.class_num }}
+                        </td>
+                        <td>
+                            {% for subject in object.subjects.all %}
+                            <p>{{subject}}</p>
+                            {% endfor %}
+                        </td>
+                          <td>
+                              <a href="{% url 'secretaries:refactor_class_subjects' pk=object.pk %}">
+                                <button type="submit" class="btn btn-primary">Редагувати предмети класу</button>
+                              </a>
+                          </td>
+                          <td>
+                              <a href="{% url 'secretaries:delete_class_subjects' pk=object.id %}">
+                                <button type="submit" class="btn btn-danger">Видалити</button>
+                              </a>
+                          </td>
+                      </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

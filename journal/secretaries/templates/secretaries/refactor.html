@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load secretaries_tags %}
+
+{% block content %}
+{% if request.user|secretary %}
+<h1 class="col-md-8 mx-auto my-4">Реагування</h1>
+<div class="col-md-8 mx-auto">
+    {% include "form.html" with button="Реагувати" %}
+</div>>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}
