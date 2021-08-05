@@ -123,6 +123,8 @@ class TopicForm(forms.ModelForm):
     finish = forms.DateField(label="Окончание", widget=forms.TextInput(attrs={'class': 'form-control',
                                                                               'placeholder': "Окончание"}),
                              required=False)
+    class_teacher = forms.ModelChoiceField(queryset=ClassTeacher.objects.all(), label="Учитель",
+                                           widget=forms.Select(attrs={'class': 'form-control'}))
 
     #    start = forms.DateField(widget=forms.HiddenInput())
     #    finish = forms.DateField(widget=forms.HiddenInput(), required=False)
@@ -131,4 +133,4 @@ class TopicForm(forms.ModelForm):
 
     class Meta:
         model = ClassTeacher
-        fields = ('topic', 'start', 'finish')
+        fields = ('topic', 'start', 'finish', 'class_teacher')

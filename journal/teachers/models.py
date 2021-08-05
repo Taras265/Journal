@@ -88,6 +88,8 @@ class Topic(models.Model):
     topic = models.TextField(max_length=50, unique=False, verbose_name='Тема')
     start = models.DateField(unique=False, verbose_name='Дата початку')
     finish = models.DateField(unique=False, blank=True, null=True, verbose_name='Дата закінченя')
+    class_teacher = models.ForeignKey(ClassTeacher, null=True, on_delete=models.CASCADE,
+                                      related_name='class_teacher_choice', verbose_name="Вчитель")
 
     def __str__(self):
         return str(self.topic)
