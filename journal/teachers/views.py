@@ -76,16 +76,16 @@ def create_topic(request, pk=None):
         if request.method == 'POST':
             data = request.POST
             form = TopicForm(data)
-            print(dict(data))
             if form.is_valid():
+                form.save(commit=False)
+                form.class_teacher = ClassTeacher.objects.get(pk=int(data['class_teacher']))
+                print(form.class_teacher)
                 form.save()
                 messages.success(request, "Тема додана!!!")
                 return redirect('/teachers/journal/' + str(pk) + '/')
             elif data:
                 class_teacher = ClassTeacher.objects.get(pk=int(data['class_teacher']))
-                print(class_teacher.subject_id)
                 start = now.date()
-                print(str(now.date()))
                 form = TopicForm(initial={
                     'class_teacher': class_teacher,
                     'start': start,
