@@ -1,5 +1,6 @@
 from django.contrib import admin
-from teachers.models import Teacher, Subject, TeacherSubjects, ClassTeacher, MarkType, Mark, Topic
+from teachers.models import Teacher, Subject, TeacherSubjects,\
+    ClassTeacher, MarkType, Mark, Topic, Semester
 
 
 admin.site.register(Teacher)
@@ -9,3 +10,4 @@ admin.site.register(ClassTeacher)
 admin.site.register(MarkType)
 admin.site.register(Mark)
 admin.site.register(Topic)
+admin.site.register(Semester)

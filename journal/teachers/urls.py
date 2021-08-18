@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
-from teachers.views import home, journal_detail, mark_add, create_topic
+from teachers.views import home, journal_detail, mark_add, create_topic,\
+    topical_mark_add, card, add_semester
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -8,4 +9,7 @@ urlpatterns = [
     path('journal/<int:pk>/', journal_detail, name='journal_marks'),
     path('journal/<int:pk>/add/mark/', mark_add, name='add_mark'),
     path('journal/<int:pk>/add/topic/', create_topic, name='add_topic'),
+    path('journal/<int:pk>/add/topical_mark/', topical_mark_add, name='add_topical_mark'),
+    path('journal/<int:pk>/card/', card, name='card'),
+    path('journal/<int:pk>/card/add/semester/', add_semester, name='add_semester'),
 ]

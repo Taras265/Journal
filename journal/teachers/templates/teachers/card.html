@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load teachers_tags %}
+
+{% block content %}
+{% if request.user|teacher %}
+<h1>Табель</h1>
+<a href="add/semester/">
+    <button type="button" class="btn btn-primary">Розрахувати семестрову</button>
+</a>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+        <th scope="col">Учень</th>
+        <th scope="col">Перша семестрова</th>
+        <th scope="col">Другий семестрова</th>
+        <th scope="col">Річна</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for student in students %}
+    <tr>
+    <th scope="row">{{student}}</th>
+        {% if first %}
+        {% for mark in first %}
+            {% if mark.student == student %}
+                <td>{{mark.mark}}</td>
+            {% endif %}
+        {% endfor %}
+        {% else %}
+            <td>Немає</td>
+        {% endif %}
+        {% if second %}
+        {% for mark in second %}
+            {% if mark.student == student %}
+                <td>{{mark.mark}}</td>
+            {% endif %}
+        {% endfor %}
+        {% else %}
+            <td>Немає</td>
+        {% endif %}
+        {% if year %}
+        {% for mark in year %}
+            {% if mark.student == student %}
+                <td>{{mark.mark}}</td>
+            {% endif %}
+        {% endfor %}
+        {% else %}
+            <td>Немає</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

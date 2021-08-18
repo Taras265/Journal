@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import Group
-from teachers.models import Subject, TeacherSubjects, Teacher, ClassTeacher, MarkType, Mark
+from teachers.models import Subject, TeacherSubjects, Teacher, ClassTeacher, MarkType, \
+    Mark, Topic, Semester
 from students.models import SchoolJournal, ClassSubjects, Student
 
 group = Group.objects.get(name='Вчитель')
@@ -88,18 +89,6 @@ class ClassTeacherForm(forms.ModelForm):
         fields = '__all__'
 
 
-class FindClassTeacherForm(forms.ModelForm):
-    class_num = forms.IntegerField(label='Пошук по номеру паралелі',
-                                   widget=forms.NumberInput
-                                   (attrs=
-                                    {'class': 'form-control',
-                                     'placeholder': 'По паралелі'}))
-
-    class Meta:
-        model = TeacherSubjects
-        fields = ('class_num',)
-
-
 class AddMark(forms.ModelForm):
     student = forms.ModelChoiceField(queryset=Student.objects.all(), widget=forms.HiddenInput())
     date = forms.DateField(widget=forms.HiddenInput())
@@ -109,6 +98,8 @@ class AddMark(forms.ModelForm):
     teacher = forms.ModelChoiceField(queryset=ClassTeacher.objects.all(), widget=forms.HiddenInput())
     subject = forms.ModelChoiceField(queryset=Subject.objects.all(), widget=forms.HiddenInput())
     type = forms.ModelChoiceField(queryset=MarkType.objects.all(), widget=forms.HiddenInput())
+    topic = forms.ModelChoiceField(queryset=Topic.objects.all(), widget=forms.HiddenInput(),
+                                   required=False)
 
     class Meta:
         model = Mark
@@ -118,19 +109,29 @@ class AddMark(forms.ModelForm):
 class TopicForm(forms.ModelForm):
     topic = forms.CharField(label="Тема", widget=forms.TextInput(attrs={'class': 'form-control',
                                                                         'placeholder': "Тема"}))
-    start = forms.DateField(label="Начало", widget=forms.TextInput(attrs={'class': 'form-control',
-                                                                          'placeholder': "Начало"}))
-    finish = forms.DateField(label="Окончание", widget=forms.TextInput(attrs={'class': 'form-control',
-                                                                              'placeholder': "Окончание"}),
-                             required=False)
-    class_teacher = forms.ModelChoiceField(queryset=ClassTeacher.objects.all(), label="Учитель",
-                                           widget=forms.Select(attrs={'class': 'form-control'}))
 
-    #    start = forms.DateField(widget=forms.HiddenInput())
-    #    finish = forms.DateField(widget=forms.HiddenInput(), required=False)
-    #    class_teacher = forms.ModelChoiceField(queryset=ClassTeacher.objects.all(),
-    #                                           widget=forms.HiddenInput())
+    start = forms.DateField(widget=forms.HiddenInput())
+    finish = forms.DateField(widget=forms.HiddenInput(), required=False)
+    class_teacher = forms.ModelChoiceField(queryset=ClassTeacher.objects.all(),
+                                           widget=forms.HiddenInput())
 
     class Meta:
-        model = ClassTeacher
+        model = Topic
         fields = ('topic', 'start', 'finish', 'class_teacher')
+
+
+class SemesterForm(forms.ModelForm):
+    start = forms.DateField(label='Дата початку',
+                            widget=forms.DateInput(attrs={'class': 'form-control',
+                                                          'placeholder': 'Дата початку'}))
+    finish = forms.DateField(label='Дата кінця',
+                             widget=forms.DateInput(attrs={'class': 'form-control',
+                                                           'placeholder': 'Дата кінця'}))
+    semester = forms.ModelChoiceField(label='Семестр',
+                                      queryset=MarkType.objects.filter(pk__in=[3, 5]),
+                                      widget=forms.Select(attrs={'class': 'form-control',
+                                                                 'placeholder': 'Семестр'}))
+
+    class Meta:
+        model = Semester
+        fields = '__all__'

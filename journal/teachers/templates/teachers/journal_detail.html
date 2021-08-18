@@ -8,21 +8,50 @@
         {% include "form.html" with button="Додати" action="add/mark/" %}
     </div>
     {% endif %}
-    <h1>Журнал {{object.journal_id}}</h1>
+    <h1>Журнал {{page.class_teacher.journal_id}}</h1>
+    {% if topics %}
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+            {{page}}
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+             aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+              {% for topic in topics %}
+              <a href="?topic={{topic.id}}"
+                 class="list-group-item list-group-item-action">{{topic}}</a>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
     <form method="post" action="add/topic/"> {% csrf_token %}
-          <input type="hidden" name="class_teacher" value="{{ object.id }}">
+          <input type="hidden" name="class_teacher" value="{{ class_teacher.id }}">
           <button type="submit" class="btn btn-primary">Нова тема</button>
     </form>
+    {% if topics %}
+    <form method="post" action="add/topical_mark/"> {% csrf_token %}
+        <input type="hidden" name="date" value="{{ page.finish }}">
+        <input type="hidden" name="teacher" value="{{ class_teacher.id }}">
+        <input type="hidden" name="subject" value="{{ page.class_teacher.subject_id.id }}">
+        <input type="hidden" name="topic" value="{{ page.id }}">
+        <button type="submit" class="btn btn-primary">Розрахувати тематичну</button>
+    </form>
+    <a href="card/">
+        <button type="button" class="btn btn-primary">Табель</button>
+    </a>
     <table class="table table-bordered table-striped">
         <thead>
     <tr>
       <th scope="col">Учень</th>
-      {% for date in dates %}
-        <th scope="col">{{date|date:"d.m.y"}}</th>
+      {% for date in heads %}
+        <th scope="col">{{date}}</th>
       {% endfor %}
-        {% if dates|date_filter %}
-        <th scope="col">Сьогодні</th>
-        {% endif %}
     </tr>
   </thead>
   <tbody>
@@ -37,28 +66,35 @@
           <form method="post"> {% csrf_token %}
           <input type="hidden" name="student" value="{{ student.id }}">
           <input type="hidden" name="date" value="{{date|date:'d.m.Y'}}">
-          <input type="hidden" name="teacher" value="{{ object.id }}">
-          <input type="hidden" name="subject" value="{{ object.subject_id.id }}">
+          <input type="hidden" name="teacher" value="{{ class_teacher.id }}">
+          <input type="hidden" name="subject" value="{{ class_teacher.subject_id.id }}">
+          <input type="hidden" name="topic" value="{{ page.id }}">
           <button type="submit" class="btn btn-light">---</button>
           </form>
         </td>
       {% endif %}
       {% endfor %}
+      {% if page.finish %}
+          <td>{{page|topical_mark:student}}</td>
+      {% else %}
       {% if dates|date_filter %}
         <td>
           <form method="post"> {% csrf_token %}
           <input type="hidden" name="student" value="{{ student.id }}">
-          <input type="hidden" name="date" value="{{object|date_today}}">
-          <input type="hidden" name="teacher" value="{{ object.id }}">
-          <input type="hidden" name="subject" value="{{ object.subject_id.id }}">
+          <input type="hidden" name="date" value="{{dates|date_today}}">
+          <input type="hidden" name="teacher" value="{{ class_teacher.id }}">
+          <input type="hidden" name="subject" value="{{ class_teacher.subject_id.id }}">
+          <input type="hidden" name="topic" value="{{ page.id }}">
           <button type="submit" class="btn btn-light">---</button>
           </form>
         </td>
+      {% endif %}
       {% endif %}
       </tr>
       {% endfor %}
   </tbody>
     </table>
+  {% endif %}
 {% else %}
     {% include '403.html' %}
 {% endif %}

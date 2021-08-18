@@ -88,16 +88,31 @@ class Topic(models.Model):
     topic = models.TextField(max_length=50, unique=False, verbose_name='Тема')
     start = models.DateField(unique=False, verbose_name='Дата початку')
     finish = models.DateField(unique=False, blank=True, null=True, verbose_name='Дата закінченя')
-    class_teacher = models.ForeignKey(ClassTeacher, null=True, on_delete=models.CASCADE,
+    class_teacher = models.ForeignKey(ClassTeacher, on_delete=models.CASCADE,
                                       related_name='class_teacher_choice', verbose_name="Вчитель")
 
     def __str__(self):
-        return str(self.topic)
+        return self.topic
 
     class Meta:
         verbose_name = 'Тема'
         verbose_name_plural = 'Теми'
         ordering = ['topic']
+
+
+class Semester(models.Model):
+    start = models.DateField(unique=False, verbose_name='Дата початку')
+    finish = models.DateField(unique=False, verbose_name='Дата закінченя')
+    semester = models.ForeignKey(MarkType, on_delete=models.CASCADE,
+                                 related_name='semester_select', verbose_name="Семестр")
+
+    def __str__(self):
+        return str(self.start)
+
+    class Meta:
+        verbose_name = 'Семестр'
+        verbose_name_plural = 'Семестри'
+        ordering = ['semester']
 
 
 class Mark(models.Model):
@@ -111,12 +126,12 @@ class Mark(models.Model):
                                 verbose_name='Предмет')
     type = models.ForeignKey(MarkType, on_delete=models.CASCADE, related_name='type_id',
                              verbose_name='Тип')
-    topic = models.ForeignKey(Topic, blank=True, null=True, on_delete=models.CASCADE,
+    topic = models.ForeignKey(Topic, null=True, blank=True, on_delete=models.CASCADE,
                               related_name='type_id',
                               verbose_name='Тема')
 
     def __str__(self):
-        return str(self.mark)
+        return str(self.mark) + " - " + self.type.type
 
     class Meta:
         verbose_name = 'Оцінка'

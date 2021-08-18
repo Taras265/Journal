@@ -9,7 +9,7 @@ from accounts.forms import UserRegistrationForm
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DeleteView, UpdateView, CreateView
 from teachers.forms import TeacherForm, TeacherSubjectsForm, SubjectForm,\
-    ClassTeacherForm, FindTeacherForm, FindClassTeacherForm
+    ClassTeacherForm, FindTeacherForm
 from teachers.models import Teacher, TeacherSubjects, Subject, ClassTeacher
 from students.forms import StudentForm, JournalForm, ClassSubjectsForm, FindStudentForm
 from students.models import Student, SchoolJournal, ClassSubjects

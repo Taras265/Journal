@@ -1,6 +1,6 @@
 from django import template
 from django.contrib.auth.models import Group
-from teachers.models import Mark, MarkType
+from teachers.models import Mark, MarkType, Topic
 import datetime
 
 now = datetime.datetime.now()
@@ -15,7 +15,8 @@ def teacher(user):
 
 @register.filter
 def mark_filter(date, student):
-    marks = Mark.objects.filter(student=student.id, date=date)
+    simple_mark = MarkType.objects.get(pk=2)
+    marks = Mark.objects.filter(student=student.id, date=date, type=simple_mark)
     if marks:
         return True
     return False
@@ -25,7 +26,7 @@ def mark_filter(date, student):
 def get_simple_mark(date, student):
     simple_mark = MarkType.objects.get(pk=2)
     mark = Mark.objects.get(student=student.id, date=date, type=simple_mark)
-    return mark
+    return mark.mark
 
 
 @register.filter
@@ -43,3 +44,14 @@ def date_filter(dates):
 @register.filter
 def date_today(t):
     return str(now.date())
+
+
+@register.filter
+def topical_mark(topic, student):
+    type_mark = MarkType.objects.get(pk=1)
+    return Mark.objects.get(student=student.id, topic=topic, type=type_mark).mark
+
+
+@register.filter
+def true(d):
+    return True
