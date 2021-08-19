@@ -2,7 +2,7 @@
 
 This project is maked as school project. Project - is a school journal website.
 
-![Log in page](https://raw.githubusercontent.com/Taras265/Routes-Django/main/img/1.png)
+![Log in page](https://raw.githubusercontent.com/Taras265/Journal/main/img/img_1.png)
 
 When you open this cite, you must to log in your account. User cannot registreted, becouse this cite have to be only for students and teachers
 
