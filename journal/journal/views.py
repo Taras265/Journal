@@ -10,4 +10,6 @@ def home(request):
         return redirect('/secretaries')
     elif u.groups.filter(name='Вчитель').exists():
         return redirect('/teachers')
+    elif u.groups.filter(name='Учень').exists():
+        return redirect('/students')
     return redirect('/admin')

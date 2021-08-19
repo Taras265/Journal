@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load students_tags %}
+
+{% block content %}
+{% if request.user|school_student %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h4 class="card-title">Предмети</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    {% for subject in subjects %}
+    <a class="list-group-item"
+       href="{% url 'students:journal_marks' pk=subject.pk %}">{{ subject }}</a>
+    {% endfor %}
+  </ul>
+</div>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

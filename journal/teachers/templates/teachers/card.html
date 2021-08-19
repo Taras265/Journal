@@ -4,9 +4,11 @@
 {% block content %}
 {% if request.user|teacher %}
 <h1>Табель</h1>
-<a href="add/semester/">
-    <button type="button" class="btn btn-primary">Розрахувати семестрову</button>
-</a>
+{% if semester %}
+    <a href="add/semester/">
+        <button type="button" class="btn btn-primary">Розрахувати семестрову</button>
+    </a>
+{% endif %}
 <table class="table table-bordered table-striped">
   <thead>
     <tr>

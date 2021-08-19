@@ -7,8 +7,6 @@ from teachers.forms import AddMark, TopicForm, SemesterForm
 import datetime
 from teachers.models import Topic
 
-from teachers.models import Semester
-
 now = datetime.datetime.now()
 
 
@@ -138,19 +136,6 @@ def topical_mark_add(request, pk=None):
                     mark_form = AddMark(data_form)
                     mark_form.save()
                     messages.success(request, "Тематична оцінка збережена!")
-                else:
-                    mark_d = Mark.objects.get(teacher=data_form['teacher'],
-                                              subject=data_form['subject'],
-                                              topic=data_form['topic'],
-                                              type=data_form['type'],
-                                              student=data_form['student']
-                                              )
-                    data_form['date'] = mark_d.date.strftime("%d.%m.%y")
-                    mark_s = AddMark(initial=data_form)
-                    mark_d.delete()
-                    print(mark_s)
-                    mark_s.save()
-                    messages.success(request, "Тематична оцінка збережена!")
             Topic.objects.filter(topic=data_form['topic'].topic).update(finish=data_form['date'])
         return redirect('/teachers/journal/' + str(pk) + '/')
 
@@ -166,7 +151,10 @@ def card(request, pk=None):
                 'second': Mark.objects.filter(type=second_year),
                 'year': Mark.objects.filter(type=year),
                 'class_teacher': class_teacher,
-                'students': Student.objects.filter(journal_id=class_teacher.journal_id.id)}
+                'students': Student.objects.filter(journal_id=class_teacher.journal_id.id),
+                'semester': list(Mark.objects.filter(teacher=ClassTeacher.objects.get(id=pk).id,
+                                                     type__in=[MarkType.objects.get(pk=3),
+                                                               MarkType.objects.get(pk=5)]))}
         return render(request, 'teachers/card.html', data)
 
 
@@ -177,15 +165,14 @@ def add_semester(request, pk=None):
             teacher = ClassTeacher.objects.get(id=pk)
             if not Mark.objects.filter(teacher=teacher.id,
                                        type=request.POST.copy()['semester']):
-                print(Mark.objects.filter(teacher=teacher.id,
-                                          type=request.POST.copy()['semester']))
                 data = {
                     'date': now.date(),
                     'teacher': teacher,
                     'subject': teacher.subject_id,
                     'type': MarkType.objects.get(pk=int(request.POST.copy()['semester'][0]))
                 }
-                for student in Student.objects.filter(journal_id=ClassTeacher.objects.get(pk=pk).journal_id):
+                for student in Student.objects.filter(
+                        journal_id=ClassTeacher.objects.get(pk=pk).journal_id):
                     data['student'] = student
                     mark_sum = 0
                     for mark in Mark.objects.filter(student=student,
@@ -198,26 +185,28 @@ def add_semester(request, pk=None):
                     form_mark = AddMark(data)
                     if form_mark.is_valid():
                         form_mark.save()
+                    if Mark.objects.filter(
+                            teacher=ClassTeacher.objects.get(id=pk).id,
+                            type__in=[MarkType.objects.get(pk=3),
+                                      MarkType.objects.get(pk=5)]):
+                        data['type'] = MarkType.objects.get(pk=4)
+                        mark_sum = 0
+                        for mark in (Mark.objects.filter(
+                                student=student,
+                                type__in=[MarkType.objects.get(pk=3),
+                                          MarkType.objects.get(pk=5)])):
+                            mark_sum += int(mark.mark)
+                        data['mark'] = int(mark_sum / len(list(Mark.objects.filter(
+                            student=student,
+                            type__in=[MarkType.objects.get(pk=3),
+                                      MarkType.objects.get(pk=5)]))))
+                        form_mark = AddMark(data)
+                        if form_mark.is_valid():
+                            form_mark.save()
+                        data['type'] = MarkType.objects.get(
+                            pk=int(request.POST.copy()['semester'][0]))
             else:
-                print(Mark.objects.filter(teacher=teacher.id,
-                                          type=request.POST.copy()['semester']))
-                print('update')
-                for mark in Mark.objects.filter(teacher=teacher.id,
-                                                type=request.POST.copy()['semester']):
-                    student = mark.student
-                    mark_sum = 0
-                    for t_mark in Mark.objects.filter(student=student,
-                                                      type=MarkType.objects.get(pk=1)):
-                        mark_sum += int(t_mark.mark)
-                    mark_sum = int(mark_sum /
-                                   len(Mark.objects.filter(student=student,
-                                                           type=MarkType.objects.get(pk=1))))
-                    Mark.objects.filter(teacher=teacher.id,
-                                        type=request.POST.copy()['semester'],
-                                        student=student).update(mark=mark_sum)
-                    Mark.objects.filter(teacher=teacher.id,
-                                        type=request.POST.copy()['semester'],
-                                        student=student)
+                messages.error(request, 'Ви вже поставили оцінку за цей період!')
             return redirect('/teachers/journal/' + str(pk) + '/card/')
         form = SemesterForm()
         return render(request, 'teachers/create.html', {'form': form})

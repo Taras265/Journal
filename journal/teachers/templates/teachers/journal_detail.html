@@ -35,13 +35,15 @@
           <button type="submit" class="btn btn-primary">Нова тема</button>
     </form>
     {% if topics %}
-    <form method="post" action="add/topical_mark/"> {% csrf_token %}
-        <input type="hidden" name="date" value="{{ page.finish }}">
-        <input type="hidden" name="teacher" value="{{ class_teacher.id }}">
-        <input type="hidden" name="subject" value="{{ page.class_teacher.subject_id.id }}">
-        <input type="hidden" name="topic" value="{{ page.id }}">
-        <button type="submit" class="btn btn-primary">Розрахувати тематичну</button>
-    </form>
+    {% if not page.finish %}
+        <form method="post" action="add/topical_mark/"> {% csrf_token %}
+            <input type="hidden" name="date" value="{{ page.finish }}">
+            <input type="hidden" name="teacher" value="{{ class_teacher.id }}">
+            <input type="hidden" name="subject" value="{{ page.class_teacher.subject_id.id }}">
+            <input type="hidden" name="topic" value="{{ page.id }}">
+            <button type="submit" class="btn btn-primary">Розрахувати тематичну</button>
+        </form>
+    {% endif %}
     <a href="card/">
         <button type="button" class="btn btn-primary">Табель</button>
     </a>
@@ -61,7 +63,9 @@
       {% for date in dates %}
       {% if date|mark_filter:student %}
         <td>{{date|get_simple_mark:student}}</td>
-      {% else %}
+      {% elif page.finish %}
+          <td>---</td>
+       {% else %}
         <td>
           <form method="post"> {% csrf_token %}
           <input type="hidden" name="student" value="{{ student.id }}">
@@ -76,19 +80,19 @@
       {% endfor %}
       {% if page.finish %}
           <td>{{page|topical_mark:student}}</td>
-      {% else %}
-      {% if dates|date_filter %}
+      {% elif page.finish %}
+          <td>---</td>
+      {% elif dates|date_filter %}
         <td>
           <form method="post"> {% csrf_token %}
           <input type="hidden" name="student" value="{{ student.id }}">
-          <input type="hidden" name="date" value="{{dates|date_today}}">
+          <input type="hidden" name="date" value="{{date|date:'d.m.Y'}}">
           <input type="hidden" name="teacher" value="{{ class_teacher.id }}">
           <input type="hidden" name="subject" value="{{ class_teacher.subject_id.id }}">
           <input type="hidden" name="topic" value="{{ page.id }}">
           <button type="submit" class="btn btn-light">---</button>
           </form>
         </td>
-      {% endif %}
       {% endif %}
       </tr>
       {% endfor %}

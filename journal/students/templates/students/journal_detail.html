@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load students_tags %}
+
+{% block content %}
+{% if request.user|school_student %}
+<h1>{{ class_teacher.subject_id }}</h1>
+    {% if topics %}
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+            {{page}}
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+             aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+              {% for topic in topics %}
+              <a href="?topic={{topic.id}}"
+                 class="list-group-item list-group-item-action">{{topic}}</a>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    {% if topics %}
+    <a href="{% url 'students:card' %}">
+        <button type="button" class="btn btn-primary">Табель</button>
+    </a>
+    {% if dates %}
+    <table class="table table-bordered table-striped">
+        <thead>
+    <tr>
+      <th scope="col">Учень</th>
+      {% for date in dates %}
+        <th scope="col">{{ date|date_remake }}</th>
+      {% endfor %}
+      {% if page.finish %}
+        <th scope="col">Тематична</th>
+      {% endif %}
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+      <th scope="row">{{student}}</th>
+      {% for date in dates %}
+          <td>{{date|get_simple_mark:student}}</td>
+      {% endfor %}
+      {% if page.finish %}
+          <td>{{page|topical_mark:student}}</td>
+      {% endif %}
+      </tr>
+  </tbody>
+    </table>
+  {% endif %}
+  {% endif %}
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}
