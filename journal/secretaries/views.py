@@ -202,7 +202,6 @@ class JournalListView(LoginRequiredMixin, ListView):
 @login_required()
 def class_teacher_list(request):
     if request.method == 'POST':
-        form = FindClassTeacherForm(request.POST)
         qs = ClassTeacher.objects.all()
         context = {'class_teachers': qs, 'form': form}
         if form.is_valid():
@@ -215,7 +214,7 @@ def class_teacher_list(request):
                 if not qs:
                     qs = ClassTeacher.objects.all()
                     messages.error(request, 'Такої паралелі немає!')
-                context = {'class_teachers': qs, 'form': form}
+                context = {'class_teachers': qs}
             except ValueError as e:
                 messages.error(request, e)
                 return render(request, 'secretaries/class_teacher_list.html', context)
@@ -223,8 +222,7 @@ def class_teacher_list(request):
         return render(request, 'secretaries/class_teacher_list.html', context)
     else:
         qs = ClassTeacher.objects.all()
-        form = FindClassTeacherForm()
-        context = {'class_teachers': qs, 'form': form}
+        context = {'class_teachers': qs}
         return render(request, 'secretaries/class_teacher_list.html', context)
 
 
