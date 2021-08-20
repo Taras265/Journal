@@ -4,7 +4,7 @@ from teachers.models import Subject, TeacherSubjects, Teacher, ClassTeacher, Mar
     Mark, Topic, Semester
 from students.models import SchoolJournal, ClassSubjects, Student
 
-group = Group.objects.get(name='Вчитель')
+group = Group.objects.all()# get(name='Вчитель')
 
 
 class SubjectForm(forms.ModelForm):
