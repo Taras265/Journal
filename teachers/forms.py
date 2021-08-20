@@ -17,7 +17,8 @@ class SubjectForm(forms.ModelForm):
 
 
 class TeacherForm(forms.ModelForm):
-    user_id = forms.ModelChoiceField(queryset=group.user_set.all(), label='Додати користувачу',
+    user_id = forms.ModelChoiceField(queryset=group,#.user_set.all()
+                                     label='Додати користувачу',
                                      widget=forms.Select(attrs={'class': 'form-control',
                                                                 'placeholder': 'Додати користувачу'}))
     name = forms.CharField(label="Iм'я", widget=forms.TextInput(attrs={'class': 'form-control',
