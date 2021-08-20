@@ -154,3 +154,6 @@ cython_debug/
 # Enviroment
 /venv/
 /.idea/
+
+# Local Settings
+/journal/journal/settings/production.py
