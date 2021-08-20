@@ -7,7 +7,7 @@
     "user": 1,
     "content_type": 7,
     "object_id": "1",
-    "object_repr": "Інформатіка",
+    "object_repr": "Р†РЅС„РѕСЂРјР°С‚С–РєР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -20,7 +20,7 @@
     "user": 1,
     "content_type": 7,
     "object_id": "2",
-    "object_repr": "Алгебра",
+    "object_repr": "РђР»РіРµР±СЂР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -33,7 +33,7 @@
     "user": 1,
     "content_type": 7,
     "object_id": "3",
-    "object_repr": "Геометрія",
+    "object_repr": "Р“РµРѕРјРµС‚СЂС–СЏ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -46,7 +46,7 @@
     "user": 1,
     "content_type": 7,
     "object_id": "4",
-    "object_repr": "Математика",
+    "object_repr": "РњР°С‚РµРјР°С‚РёРєР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -59,7 +59,7 @@
     "user": 1,
     "content_type": 3,
     "object_id": "1",
-    "object_repr": "Адміністратор",
+    "object_repr": "РђРґРјС–РЅС–СЃС‚СЂР°С‚РѕСЂ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -72,7 +72,7 @@
     "user": 1,
     "content_type": 3,
     "object_id": "1",
-    "object_repr": "Адміністратор",
+    "object_repr": "РђРґРјС–РЅС–СЃС‚СЂР°С‚РѕСЂ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
   }
@@ -85,7 +85,7 @@
     "user": 1,
     "content_type": 3,
     "object_id": "2",
-    "object_repr": "Секретар",
+    "object_repr": "РЎРµРєСЂРµС‚Р°СЂ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -98,7 +98,7 @@
     "user": 1,
     "content_type": 3,
     "object_id": "3",
-    "object_repr": "Вчитель",
+    "object_repr": "Р’С‡РёС‚РµР»СЊ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -111,7 +111,7 @@
     "user": 1,
     "content_type": 3,
     "object_id": "4",
-    "object_repr": "Учень",
+    "object_repr": "РЈС‡РµРЅСЊ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -124,7 +124,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "1",
-    "object_repr": "Адмін",
+    "object_repr": "РђРґРјС–РЅ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
   }
@@ -137,7 +137,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "2",
-    "object_repr": "Секретар",
+    "object_repr": "РЎРµРєСЂРµС‚Р°СЂ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -150,7 +150,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "2",
-    "object_repr": "Секретар",
+    "object_repr": "РЎРµРєСЂРµС‚Р°СЂ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
   }
@@ -163,7 +163,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "2",
-    "object_repr": "Секретар",
+    "object_repr": "РЎРµРєСЂРµС‚Р°СЂ",
     "action_flag": 2,
     "change_message": "[]"
   }
@@ -189,7 +189,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "4",
-    "object_repr": "Се",
+    "object_repr": "РЎРµ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -202,7 +202,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "5",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -215,7 +215,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "6",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -228,7 +228,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "7",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -241,7 +241,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "8",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -254,7 +254,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "9",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -267,7 +267,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "10",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -280,7 +280,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "17",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -293,7 +293,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "18",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -306,7 +306,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "19",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -319,7 +319,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "20",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -332,7 +332,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "21",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -345,7 +345,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "22",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -358,7 +358,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "23",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -371,7 +371,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "24",
-    "object_repr": "р",
+    "object_repr": "СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -384,7 +384,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "25",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -397,7 +397,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "26",
-    "object_repr": "к",
+    "object_repr": "Рє",
     "action_flag": 3,
     "change_message": ""
   }
@@ -410,7 +410,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "27",
-    "object_repr": "екретар",
+    "object_repr": "РµРєСЂРµС‚Р°СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -423,7 +423,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "29",
-    "object_repr": "Се",
+    "object_repr": "РЎРµ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -436,7 +436,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "31",
-    "object_repr": "С",
+    "object_repr": "РЎ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -449,7 +449,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "32",
-    "object_repr": "Секрета",
+    "object_repr": "РЎРµРєСЂРµС‚Р°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -462,7 +462,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "40",
-    "object_repr": "Секр",
+    "object_repr": "РЎРµРєСЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -475,7 +475,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "36",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -488,7 +488,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "47",
-    "object_repr": "Секртар",
+    "object_repr": "РЎРµРєСЂС‚Р°СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -527,7 +527,7 @@
     "user": 1,
     "content_type": 7,
     "object_id": "5",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -540,7 +540,7 @@
     "user": 1,
     "content_type": 7,
     "object_id": "6",
-    "object_repr": "Ялта",
+    "object_repr": "РЇР»С‚Р°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -553,7 +553,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "59",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -592,7 +592,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "61",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -605,7 +605,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "65",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
   }
@@ -631,7 +631,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "65",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -644,7 +644,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "67",
-    "object_repr": "Наталія",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -657,7 +657,7 @@
     "user": 1,
     "content_type": 8,
     "object_id": "3",
-    "object_repr": "Нат Манчу Володимирівн",
+    "object_repr": "РќР°С‚ РњР°РЅС‡Сѓ Р’РѕР»РѕРґРёРјРёСЂС–РІРЅ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -670,7 +670,7 @@
     "user": 1,
     "content_type": 9,
     "object_id": "1",
-    "object_repr": "Наталія Манчук Володимирівна",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ РњР°РЅС‡СѓРє Р’РѕР»РѕРґРёРјРёСЂС–РІРЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0438\\u043f\\u0438\\u0441\\u043e\\u043a \\u043f\\u0440\\u0435\\u0434\\u043c\\u0435\\u0442i\\u0432\"]}}]"
   }
@@ -683,7 +683,7 @@
     "user": 1,
     "content_type": 8,
     "object_id": "3",
-    "object_repr": "Наталія Манчук Володимирівна",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ РњР°РЅС‡СѓРє Р’РѕР»РѕРґРёРјРёСЂС–РІРЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -696,7 +696,7 @@
     "user": 1,
     "content_type": 8,
     "object_id": "4",
-    "object_repr": "Наталі Манчук Володимирівна",
+    "object_repr": "РќР°С‚Р°Р»С– РњР°РЅС‡СѓРє Р’РѕР»РѕРґРёРјРёСЂС–РІРЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -709,7 +709,7 @@
     "user": 1,
     "content_type": 8,
     "object_id": "5",
-    "object_repr": "Наталі Манчук Володимирівна",
+    "object_repr": "РќР°С‚Р°Р»С– РњР°РЅС‡СѓРє Р’РѕР»РѕРґРёРјРёСЂС–РІРЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -722,7 +722,7 @@
     "user": 1,
     "content_type": 8,
     "object_id": "6",
-    "object_repr": "Наталі Манчук Володимирівна",
+    "object_repr": "РќР°С‚Р°Р»С– РњР°РЅС‡СѓРє Р’РѕР»РѕРґРёРјРёСЂС–РІРЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -735,7 +735,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "69",
-    "object_repr": "Секрета",
+    "object_repr": "РЎРµРєСЂРµС‚Р°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -748,7 +748,7 @@
     "user": 1,
     "content_type": 10,
     "object_id": "1",
-    "object_repr": "9-Б",
+    "object_repr": "9-Р‘",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -761,7 +761,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "71",
-    "object_repr": "Тарас",
+    "object_repr": "РўР°СЂР°СЃ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -774,7 +774,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "71",
-    "object_repr": "Тарас",
+    "object_repr": "РўР°СЂР°СЃ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
   }
@@ -787,7 +787,7 @@
     "user": 1,
     "content_type": 11,
     "object_id": "1",
-    "object_repr": "Тарас Б'ялик Васильович",
+    "object_repr": "РўР°СЂР°СЃ Р‘'СЏР»РёРє Р’Р°СЃРёР»СЊРѕРІРёС‡",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -800,7 +800,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "72",
-    "object_repr": "Нікіта",
+    "object_repr": "РќС–РєС–С‚Р°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -813,7 +813,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "72",
-    "object_repr": "Нікіта",
+    "object_repr": "РќС–РєС–С‚Р°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
   }
@@ -826,7 +826,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "72",
-    "object_repr": "Нікіта",
+    "object_repr": "РќС–РєС–С‚Р°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -839,7 +839,7 @@
     "user": 1,
     "content_type": 11,
     "object_id": "1",
-    "object_repr": "Тарас Б'ялик Васильович",
+    "object_repr": "РўР°СЂР°СЃ Р‘'СЏР»РёРє Р’Р°СЃРёР»СЊРѕРІРёС‡",
     "action_flag": 3,
     "change_message": ""
   }
@@ -852,7 +852,7 @@
     "user": 1,
     "content_type": 10,
     "object_id": "1",
-    "object_repr": "9-Б",
+    "object_repr": "9-Р‘",
     "action_flag": 3,
     "change_message": ""
   }
@@ -865,7 +865,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "71",
-    "object_repr": "Тарас",
+    "object_repr": "РўР°СЂР°СЃ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -878,7 +878,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "74",
-    "object_repr": "Тарас",
+    "object_repr": "РўР°СЂР°СЃ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -904,7 +904,7 @@
     "user": 1,
     "content_type": 13,
     "object_id": "1",
-    "object_repr": "Наталія Манчук Володимирівна - Інформатіка",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ РњР°РЅС‡СѓРє Р’РѕР»РѕРґРёРјРёСЂС–РІРЅР° - Р†РЅС„РѕСЂРјР°С‚С–РєР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1034,7 +1034,7 @@
     "user": 1,
     "content_type": 8,
     "object_id": "9",
-    "object_repr": "Ольга Вітвіцька Валеріївна",
+    "object_repr": "РћР»СЊРіР° Р’С–С‚РІС–С†СЊРєР° Р’Р°Р»РµСЂС–С—РІРЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0456\\u0437\\u0432\\u0438\\u0449\\u0435\"]}}]"
   }
@@ -1112,7 +1112,7 @@
     "user": 1,
     "content_type": 8,
     "object_id": "9",
-    "object_repr": "Ольга Вітвіцька Валеріївна",
+    "object_repr": "РћР»СЊРіР° Р’С–С‚РІС–С†СЊРєР° Р’Р°Р»РµСЂС–С—РІРЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -1125,7 +1125,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "76",
-    "object_repr": "Ольга",
+    "object_repr": "РћР»СЊРіР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -1138,7 +1138,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "77",
-    "object_repr": "Ольга",
+    "object_repr": "РћР»СЊРіР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1151,7 +1151,7 @@
     "user": 1,
     "content_type": 8,
     "object_id": "10",
-    "object_repr": "Ольга Вітвіцька Валеріївна",
+    "object_repr": "РћР»СЊРіР° Р’С–С‚РІС–С†СЊРєР° Р’Р°Р»РµСЂС–С—РІРЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1164,7 +1164,7 @@
     "user": 1,
     "content_type": 9,
     "object_id": "5",
-    "object_repr": "Ольга Вітвіцька Валеріївна",
+    "object_repr": "РћР»СЊРіР° Р’С–С‚РІС–С†СЊРєР° Р’Р°Р»РµСЂС–С—РІРЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1216,7 +1216,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "77",
-    "object_repr": "Ольга",
+    "object_repr": "РћР»СЊРіР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -1229,7 +1229,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "78",
-    "object_repr": "Ірина",
+    "object_repr": "Р†СЂРёРЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1242,7 +1242,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "78",
-    "object_repr": "Ірина",
+    "object_repr": "Р†СЂРёРЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
   }
@@ -1255,7 +1255,7 @@
     "user": 1,
     "content_type": 8,
     "object_id": "11",
-    "object_repr": "Ірина Азьома Валеріївна",
+    "object_repr": "Р†СЂРёРЅР° РђР·СЊРѕРјР° Р’Р°Р»РµСЂС–С—РІРЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1268,7 +1268,7 @@
     "user": 1,
     "content_type": 7,
     "object_id": "11",
-    "object_repr": "Англійська",
+    "object_repr": "РђРЅРіР»С–Р№СЃСЊРєР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1281,7 +1281,7 @@
     "user": 1,
     "content_type": 9,
     "object_id": "6",
-    "object_repr": "Ірина Азьома Валеріївна",
+    "object_repr": "Р†СЂРёРЅР° РђР·СЊРѕРјР° Р’Р°Р»РµСЂС–С—РІРЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1385,7 +1385,7 @@
     "user": 1,
     "content_type": 13,
     "object_id": "13",
-    "object_repr": "Наталія Манчук Володимирівна - вчитель 5-A",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ РњР°РЅС‡СѓРє Р’РѕР»РѕРґРёРјРёСЂС–РІРЅР° - РІС‡РёС‚РµР»СЊ 5-A",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1398,7 +1398,7 @@
     "user": 1,
     "content_type": 14,
     "object_id": "1",
-    "object_repr": "Тематична",
+    "object_repr": "РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1411,7 +1411,7 @@
     "user": 1,
     "content_type": 14,
     "object_id": "2",
-    "object_repr": "Звичайна",
+    "object_repr": "Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1424,7 +1424,7 @@
     "user": 1,
     "content_type": 14,
     "object_id": "3",
-    "object_repr": "Семестрова",
+    "object_repr": "РЎРµРјРµСЃС‚СЂРѕРІР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1437,7 +1437,7 @@
     "user": 1,
     "content_type": 14,
     "object_id": "4",
-    "object_repr": "Річна",
+    "object_repr": "Р С–С‡РЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1515,7 +1515,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "79",
-    "object_repr": "Максим",
+    "object_repr": "РњР°РєСЃРёРј",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1528,7 +1528,7 @@
     "user": 1,
     "content_type": 4,
     "object_id": "79",
-    "object_repr": "Максим",
+    "object_repr": "РњР°РєСЃРёРј",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
   }
@@ -1541,7 +1541,7 @@
     "user": 1,
     "content_type": 11,
     "object_id": "3",
-    "object_repr": "Максим Черненко Петров",
+    "object_repr": "РњР°РєСЃРёРј Р§РµСЂРЅРµРЅРєРѕ РџРµС‚СЂРѕРІ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -1983,7 +1983,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "1",
-    "object_repr": "Пітон",
+    "object_repr": "РџС–С‚РѕРЅ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -2022,7 +2022,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "1",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -2035,7 +2035,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "2",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -2048,7 +2048,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "4",
-    "object_repr": "Матеріал 8 классу",
+    "object_repr": "РњР°С‚РµСЂС–Р°Р» 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -2061,7 +2061,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "5",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -2230,7 +2230,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "3",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 2,
     "change_message": "[]"
   }
@@ -2243,7 +2243,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "3",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2282,7 +2282,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "3",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2321,7 +2321,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "3",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2334,7 +2334,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "6",
-    "object_repr": "Таблицы exe",
+    "object_repr": "РўР°Р±Р»РёС†С‹ exe",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2347,7 +2347,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "6",
-    "object_repr": "Таблицы exe",
+    "object_repr": "РўР°Р±Р»РёС†С‹ exe",
     "action_flag": 3,
     "change_message": ""
   }
@@ -2386,7 +2386,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "3",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2399,7 +2399,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "7",
-    "object_repr": "Таблиці exe",
+    "object_repr": "РўР°Р±Р»РёС†С– exe",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2412,7 +2412,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "7",
-    "object_repr": "Таблиці exe",
+    "object_repr": "РўР°Р±Р»РёС†С– exe",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2516,7 +2516,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "4",
-    "object_repr": "Матеріал 8 классу",
+    "object_repr": "РњР°С‚РµСЂС–Р°Р» 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -2529,7 +2529,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "3",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -2542,7 +2542,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "7",
-    "object_repr": "Таблиці exe",
+    "object_repr": "РўР°Р±Р»РёС†С– exe",
     "action_flag": 3,
     "change_message": ""
   }
@@ -2646,7 +2646,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2789,7 +2789,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u043f\\u043e\\u0447\\u0430\\u0442\\u043a\\u0443\"]}}]"
   }
@@ -2945,7 +2945,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2958,7 +2958,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2971,7 +2971,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -2984,7 +2984,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -3023,7 +3023,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -3062,7 +3062,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -3088,7 +3088,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -3114,7 +3114,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -3127,7 +3127,7 @@
     "user": 1,
     "content_type": 14,
     "object_id": "3",
-    "object_repr": "Перший семестр",
+    "object_repr": "РџРµСЂС€РёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u0446\\u0456\\u043d\\u043a\\u0438\"]}}]"
   }
@@ -3140,7 +3140,7 @@
     "user": 1,
     "content_type": 14,
     "object_id": "5",
-    "object_repr": "Другий с",
+    "object_repr": "Р”СЂСѓРіРёР№ СЃ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -3153,7 +3153,7 @@
     "user": 1,
     "content_type": 14,
     "object_id": "5",
-    "object_repr": "Другий семестр",
+    "object_repr": "Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f \\u043e\\u0446\\u0456\\u043d\\u043a\\u0438\"]}}]"
   }
@@ -3465,7 +3465,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "9",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -3920,7 +3920,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "10",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -3933,7 +3933,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "11",
-    "object_repr": "Цикли",
+    "object_repr": "Р¦РёРєР»Рё",
     "action_flag": 3,
     "change_message": ""
   }
@@ -3946,7 +3946,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -3959,7 +3959,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "8",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4466,7 +4466,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "91",
-    "object_repr": "12 - Тематична",
+    "object_repr": "12 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0446\\u0456\\u043d\\u043a\\u0430\"]}}]"
   }
@@ -4479,7 +4479,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "89",
-    "object_repr": "11 - Звичайна",
+    "object_repr": "11 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0446\\u0456\\u043d\\u043a\\u0430\"]}}]"
   }
@@ -4492,7 +4492,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "89",
-    "object_repr": "12 - Звичайна",
+    "object_repr": "12 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0446\\u0456\\u043d\\u043a\\u0430\"]}}]"
   }
@@ -4505,7 +4505,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "89",
-    "object_repr": "11 - Звичайна",
+    "object_repr": "11 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0446\\u0456\\u043d\\u043a\\u0430\"]}}]"
   }
@@ -4518,7 +4518,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "90",
-    "object_repr": "9 - Звичайна",
+    "object_repr": "9 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4531,7 +4531,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "89",
-    "object_repr": "11 - Звичайна",
+    "object_repr": "11 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4544,7 +4544,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "84",
-    "object_repr": "10 - Звичайна",
+    "object_repr": "10 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4557,7 +4557,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "82",
-    "object_repr": "9 - Звичайна",
+    "object_repr": "9 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4570,7 +4570,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "88",
-    "object_repr": "9 - Перший семестр",
+    "object_repr": "9 - РџРµСЂС€РёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4583,7 +4583,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "87",
-    "object_repr": "10 - Перший семестр",
+    "object_repr": "10 - РџРµСЂС€РёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4596,7 +4596,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "92",
-    "object_repr": "9 - Тематична",
+    "object_repr": "9 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4609,7 +4609,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "86",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4622,7 +4622,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "85",
-    "object_repr": "9 - Тематична",
+    "object_repr": "9 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4635,7 +4635,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "13",
-    "object_repr": "Осонови програмування",
+    "object_repr": "РћСЃРѕРЅРѕРІРё РїСЂРѕРіСЂР°РјСѓРІР°РЅРЅСЏ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4648,7 +4648,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "12",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -4661,7 +4661,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "95",
-    "object_repr": "9 - Звичайна",
+    "object_repr": "9 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -4674,7 +4674,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "95",
-    "object_repr": "11 - Звичайна",
+    "object_repr": "11 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0446\\u0456\\u043d\\u043a\\u0430\"]}}]"
   }
@@ -4687,7 +4687,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "96",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0446\\u0456\\u043d\\u043a\\u0430\"]}}]"
   }
@@ -4700,7 +4700,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "96",
-    "object_repr": "11 - Тематична",
+    "object_repr": "11 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u0446\\u0456\\u043d\\u043a\\u0430\"]}}]"
   }
@@ -4713,7 +4713,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "97",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4726,7 +4726,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "12",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -4739,7 +4739,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "99",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4752,7 +4752,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "98",
-    "object_repr": "11 - Тематична",
+    "object_repr": "11 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4765,7 +4765,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "12",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -4778,7 +4778,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "101",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4791,7 +4791,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "102",
-    "object_repr": "12 - Звичайна",
+    "object_repr": "12 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4804,7 +4804,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "12",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -4817,7 +4817,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "12",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -4830,7 +4830,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "104",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4843,7 +4843,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "105",
-    "object_repr": "12 - Звичайна",
+    "object_repr": "12 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4856,7 +4856,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "107",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4869,7 +4869,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "12",
-    "object_repr": "Повторення курсу 8 классу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -4882,7 +4882,7 @@
     "user": 1,
     "content_type": 13,
     "object_id": "6",
-    "object_repr": "Наталія Манчук Володимирівна - вчитель 9-Б",
+    "object_repr": "РќР°С‚Р°Р»С–СЏ РњР°РЅС‡СѓРє Р’РѕР»РѕРґРёРјРёСЂС–РІРЅР° - РІС‡РёС‚РµР»СЊ 9-Р‘",
     "action_flag": 3,
     "change_message": ""
   }
@@ -4895,7 +4895,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "14",
-    "object_repr": "Повторення курсу 8 класу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСѓ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -4908,7 +4908,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "110",
-    "object_repr": "10 - Звичайна",
+    "object_repr": "10 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -4921,7 +4921,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "110",
-    "object_repr": "10 - Звичайна",
+    "object_repr": "10 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0447\\u0435\\u043d\\u044c\"]}}]"
   }
@@ -4934,7 +4934,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "110",
-    "object_repr": "10 - Звичайна",
+    "object_repr": "10 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0447\\u0435\\u043d\\u044c\"]}}]"
   }
@@ -4947,7 +4947,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "110",
-    "object_repr": "10 - Звичайна",
+    "object_repr": "10 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0447\\u0435\\u043d\\u044c\"]}}]"
   }
@@ -4960,7 +4960,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "110",
-    "object_repr": "10 - Звичайна",
+    "object_repr": "10 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0447\\u0435\\u043d\\u044c\"]}}]"
   }
@@ -4973,7 +4973,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "110",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0438\\u043f\"]}}]"
   }
@@ -4986,7 +4986,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "14",
-    "object_repr": "Повторення курсу 8 класу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -4999,7 +4999,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "111",
-    "object_repr": "10 - Звичайна",
+    "object_repr": "10 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -5012,7 +5012,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "112",
-    "object_repr": "10 - Перший семестр",
+    "object_repr": "10 - РџРµСЂС€РёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
   }
@@ -5025,7 +5025,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "112",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0423\\u0447\\u0435\\u043d\\u044c\", \"\\u0422\\u0438\\u043f\", \"\\u0422\\u0435\\u043c\\u0430\"]}}]"
   }
@@ -5038,7 +5038,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "14",
-    "object_repr": "Повторення курсу 8 класу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСѓ",
     "action_flag": 2,
     "change_message": "[]"
   }
@@ -5051,7 +5051,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "113",
-    "object_repr": "9 - Звичайна",
+    "object_repr": "9 - Р—РІРёС‡Р°Р№РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5064,7 +5064,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "112",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5077,7 +5077,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "110",
-    "object_repr": "10 - Тематична",
+    "object_repr": "10 - РўРµРјР°С‚РёС‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5090,7 +5090,7 @@
     "user": 1,
     "content_type": 16,
     "object_id": "14",
-    "object_repr": "Повторення курсу 8 класу",
+    "object_repr": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСѓ",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0437\\u0430\\u043a\\u0456\\u043d\\u0447\\u0435\\u043d\\u044f\"]}}]"
   }
@@ -5103,7 +5103,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "119",
-    "object_repr": "10 - Другий семестр",
+    "object_repr": "10 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5116,7 +5116,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "120",
-    "object_repr": "9 - Другий семестр",
+    "object_repr": "9 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5129,7 +5129,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "121",
-    "object_repr": "10 - Другий семестр",
+    "object_repr": "10 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5142,7 +5142,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "122",
-    "object_repr": "10 - Другий семестр",
+    "object_repr": "10 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5155,7 +5155,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "123",
-    "object_repr": "10 - Другий семестр",
+    "object_repr": "10 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5168,7 +5168,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "124",
-    "object_repr": "10 - Другий семестр",
+    "object_repr": "10 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5181,7 +5181,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "125",
-    "object_repr": "10 - Другий семестр",
+    "object_repr": "10 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5194,7 +5194,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "126",
-    "object_repr": "10 - Другий семестр",
+    "object_repr": "10 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5207,7 +5207,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "127",
-    "object_repr": "10 - Другий семестр",
+    "object_repr": "10 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5220,7 +5220,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "130",
-    "object_repr": "9 - Другий семестр",
+    "object_repr": "9 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5233,7 +5233,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "128",
-    "object_repr": "10 - Другий семестр",
+    "object_repr": "10 - Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5246,7 +5246,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "131",
-    "object_repr": "9 - Річна",
+    "object_repr": "9 - Р С–С‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5259,7 +5259,7 @@
     "user": 1,
     "content_type": 15,
     "object_id": "129",
-    "object_repr": "10 - Річна",
+    "object_repr": "10 - Р С–С‡РЅР°",
     "action_flag": 3,
     "change_message": ""
   }
@@ -5484,7 +5484,7 @@
   "model": "auth.permission",
   "pk": 25,
   "fields": {
-    "name": "Can add Предмет",
+    "name": "Can add РџСЂРµРґРјРµС‚",
     "content_type": 7,
     "codename": "add_subject"
   }
@@ -5493,7 +5493,7 @@
   "model": "auth.permission",
   "pk": 26,
   "fields": {
-    "name": "Can change Предмет",
+    "name": "Can change РџСЂРµРґРјРµС‚",
     "content_type": 7,
     "codename": "change_subject"
   }
@@ -5502,7 +5502,7 @@
   "model": "auth.permission",
   "pk": 27,
   "fields": {
-    "name": "Can delete Предмет",
+    "name": "Can delete РџСЂРµРґРјРµС‚",
     "content_type": 7,
     "codename": "delete_subject"
   }
@@ -5511,7 +5511,7 @@
   "model": "auth.permission",
   "pk": 28,
   "fields": {
-    "name": "Can view Предмет",
+    "name": "Can view РџСЂРµРґРјРµС‚",
     "content_type": 7,
     "codename": "view_subject"
   }
@@ -5520,7 +5520,7 @@
   "model": "auth.permission",
   "pk": 29,
   "fields": {
-    "name": "Can add Вчитель",
+    "name": "Can add Р’С‡РёС‚РµР»СЊ",
     "content_type": 8,
     "codename": "add_teacher"
   }
@@ -5529,7 +5529,7 @@
   "model": "auth.permission",
   "pk": 30,
   "fields": {
-    "name": "Can change Вчитель",
+    "name": "Can change Р’С‡РёС‚РµР»СЊ",
     "content_type": 8,
     "codename": "change_teacher"
   }
@@ -5538,7 +5538,7 @@
   "model": "auth.permission",
   "pk": 31,
   "fields": {
-    "name": "Can delete Вчитель",
+    "name": "Can delete Р’С‡РёС‚РµР»СЊ",
     "content_type": 8,
     "codename": "delete_teacher"
   }
@@ -5547,7 +5547,7 @@
   "model": "auth.permission",
   "pk": 32,
   "fields": {
-    "name": "Can view Вчитель",
+    "name": "Can view Р’С‡РёС‚РµР»СЊ",
     "content_type": 8,
     "codename": "view_teacher"
   }
@@ -5556,7 +5556,7 @@
   "model": "auth.permission",
   "pk": 33,
   "fields": {
-    "name": "Can add Сиписок предметiв",
+    "name": "Can add РЎРёРїРёСЃРѕРє РїСЂРµРґРјРµС‚iРІ",
     "content_type": 9,
     "codename": "add_teachersubjects"
   }
@@ -5565,7 +5565,7 @@
   "model": "auth.permission",
   "pk": 34,
   "fields": {
-    "name": "Can change Сиписок предметiв",
+    "name": "Can change РЎРёРїРёСЃРѕРє РїСЂРµРґРјРµС‚iРІ",
     "content_type": 9,
     "codename": "change_teachersubjects"
   }
@@ -5574,7 +5574,7 @@
   "model": "auth.permission",
   "pk": 35,
   "fields": {
-    "name": "Can delete Сиписок предметiв",
+    "name": "Can delete РЎРёРїРёСЃРѕРє РїСЂРµРґРјРµС‚iРІ",
     "content_type": 9,
     "codename": "delete_teachersubjects"
   }
@@ -5583,7 +5583,7 @@
   "model": "auth.permission",
   "pk": 36,
   "fields": {
-    "name": "Can view Сиписок предметiв",
+    "name": "Can view РЎРёРїРёСЃРѕРє РїСЂРµРґРјРµС‚iРІ",
     "content_type": 9,
     "codename": "view_teachersubjects"
   }
@@ -5592,7 +5592,7 @@
   "model": "auth.permission",
   "pk": 37,
   "fields": {
-    "name": "Can add Журнал",
+    "name": "Can add Р–СѓСЂРЅР°Р»",
     "content_type": 10,
     "codename": "add_schooljournal"
   }
@@ -5601,7 +5601,7 @@
   "model": "auth.permission",
   "pk": 38,
   "fields": {
-    "name": "Can change Журнал",
+    "name": "Can change Р–СѓСЂРЅР°Р»",
     "content_type": 10,
     "codename": "change_schooljournal"
   }
@@ -5610,7 +5610,7 @@
   "model": "auth.permission",
   "pk": 39,
   "fields": {
-    "name": "Can delete Журнал",
+    "name": "Can delete Р–СѓСЂРЅР°Р»",
     "content_type": 10,
     "codename": "delete_schooljournal"
   }
@@ -5619,7 +5619,7 @@
   "model": "auth.permission",
   "pk": 40,
   "fields": {
-    "name": "Can view Журнал",
+    "name": "Can view Р–СѓСЂРЅР°Р»",
     "content_type": 10,
     "codename": "view_schooljournal"
   }
@@ -5628,7 +5628,7 @@
   "model": "auth.permission",
   "pk": 41,
   "fields": {
-    "name": "Can add Вчитель",
+    "name": "Can add Р’С‡РёС‚РµР»СЊ",
     "content_type": 11,
     "codename": "add_student"
   }
@@ -5637,7 +5637,7 @@
   "model": "auth.permission",
   "pk": 42,
   "fields": {
-    "name": "Can change Вчитель",
+    "name": "Can change Р’С‡РёС‚РµР»СЊ",
     "content_type": 11,
     "codename": "change_student"
   }
@@ -5646,7 +5646,7 @@
   "model": "auth.permission",
   "pk": 43,
   "fields": {
-    "name": "Can delete Вчитель",
+    "name": "Can delete Р’С‡РёС‚РµР»СЊ",
     "content_type": 11,
     "codename": "delete_student"
   }
@@ -5655,7 +5655,7 @@
   "model": "auth.permission",
   "pk": 44,
   "fields": {
-    "name": "Can view Вчитель",
+    "name": "Can view Р’С‡РёС‚РµР»СЊ",
     "content_type": 11,
     "codename": "view_student"
   }
@@ -5664,7 +5664,7 @@
   "model": "auth.permission",
   "pk": 45,
   "fields": {
-    "name": "Can add Предмети классу",
+    "name": "Can add РџСЂРµРґРјРµС‚Рё РєР»Р°СЃСЃСѓ",
     "content_type": 12,
     "codename": "add_classsubjects"
   }
@@ -5673,7 +5673,7 @@
   "model": "auth.permission",
   "pk": 46,
   "fields": {
-    "name": "Can change Предмети классу",
+    "name": "Can change РџСЂРµРґРјРµС‚Рё РєР»Р°СЃСЃСѓ",
     "content_type": 12,
     "codename": "change_classsubjects"
   }
@@ -5682,7 +5682,7 @@
   "model": "auth.permission",
   "pk": 47,
   "fields": {
-    "name": "Can delete Предмети классу",
+    "name": "Can delete РџСЂРµРґРјРµС‚Рё РєР»Р°СЃСЃСѓ",
     "content_type": 12,
     "codename": "delete_classsubjects"
   }
@@ -5691,7 +5691,7 @@
   "model": "auth.permission",
   "pk": 48,
   "fields": {
-    "name": "Can view Предмети классу",
+    "name": "Can view РџСЂРµРґРјРµС‚Рё РєР»Р°СЃСЃСѓ",
     "content_type": 12,
     "codename": "view_classsubjects"
   }
@@ -5700,7 +5700,7 @@
   "model": "auth.permission",
   "pk": 49,
   "fields": {
-    "name": "Can add Предмет вчителя",
+    "name": "Can add РџСЂРµРґРјРµС‚ РІС‡РёС‚РµР»СЏ",
     "content_type": 13,
     "codename": "add_classteacher"
   }
@@ -5709,7 +5709,7 @@
   "model": "auth.permission",
   "pk": 50,
   "fields": {
-    "name": "Can change Предмет вчителя",
+    "name": "Can change РџСЂРµРґРјРµС‚ РІС‡РёС‚РµР»СЏ",
     "content_type": 13,
     "codename": "change_classteacher"
   }
@@ -5718,7 +5718,7 @@
   "model": "auth.permission",
   "pk": 51,
   "fields": {
-    "name": "Can delete Предмет вчителя",
+    "name": "Can delete РџСЂРµРґРјРµС‚ РІС‡РёС‚РµР»СЏ",
     "content_type": 13,
     "codename": "delete_classteacher"
   }
@@ -5727,7 +5727,7 @@
   "model": "auth.permission",
   "pk": 52,
   "fields": {
-    "name": "Can view Предмет вчителя",
+    "name": "Can view РџСЂРµРґРјРµС‚ РІС‡РёС‚РµР»СЏ",
     "content_type": 13,
     "codename": "view_classteacher"
   }
@@ -5736,7 +5736,7 @@
   "model": "auth.permission",
   "pk": 53,
   "fields": {
-    "name": "Can add Тип оцінки",
+    "name": "Can add РўРёРї РѕС†С–РЅРєРё",
     "content_type": 14,
     "codename": "add_marktype"
   }
@@ -5745,7 +5745,7 @@
   "model": "auth.permission",
   "pk": 54,
   "fields": {
-    "name": "Can change Тип оцінки",
+    "name": "Can change РўРёРї РѕС†С–РЅРєРё",
     "content_type": 14,
     "codename": "change_marktype"
   }
@@ -5754,7 +5754,7 @@
   "model": "auth.permission",
   "pk": 55,
   "fields": {
-    "name": "Can delete Тип оцінки",
+    "name": "Can delete РўРёРї РѕС†С–РЅРєРё",
     "content_type": 14,
     "codename": "delete_marktype"
   }
@@ -5763,7 +5763,7 @@
   "model": "auth.permission",
   "pk": 56,
   "fields": {
-    "name": "Can view Тип оцінки",
+    "name": "Can view РўРёРї РѕС†С–РЅРєРё",
     "content_type": 14,
     "codename": "view_marktype"
   }
@@ -5772,7 +5772,7 @@
   "model": "auth.permission",
   "pk": 57,
   "fields": {
-    "name": "Can add Тип оцінки",
+    "name": "Can add РўРёРї РѕС†С–РЅРєРё",
     "content_type": 15,
     "codename": "add_mark"
   }
@@ -5781,7 +5781,7 @@
   "model": "auth.permission",
   "pk": 58,
   "fields": {
-    "name": "Can change Тип оцінки",
+    "name": "Can change РўРёРї РѕС†С–РЅРєРё",
     "content_type": 15,
     "codename": "change_mark"
   }
@@ -5790,7 +5790,7 @@
   "model": "auth.permission",
   "pk": 59,
   "fields": {
-    "name": "Can delete Тип оцінки",
+    "name": "Can delete РўРёРї РѕС†С–РЅРєРё",
     "content_type": 15,
     "codename": "delete_mark"
   }
@@ -5799,7 +5799,7 @@
   "model": "auth.permission",
   "pk": 60,
   "fields": {
-    "name": "Can view Тип оцінки",
+    "name": "Can view РўРёРї РѕС†С–РЅРєРё",
     "content_type": 15,
     "codename": "view_mark"
   }
@@ -5844,7 +5844,7 @@
   "model": "auth.permission",
   "pk": 65,
   "fields": {
-    "name": "Can add Семестр",
+    "name": "Can add РЎРµРјРµСЃС‚СЂ",
     "content_type": 17,
     "codename": "add_semester"
   }
@@ -5853,7 +5853,7 @@
   "model": "auth.permission",
   "pk": 66,
   "fields": {
-    "name": "Can change Семестр",
+    "name": "Can change РЎРµРјРµСЃС‚СЂ",
     "content_type": 17,
     "codename": "change_semester"
   }
@@ -5862,7 +5862,7 @@
   "model": "auth.permission",
   "pk": 67,
   "fields": {
-    "name": "Can delete Семестр",
+    "name": "Can delete РЎРµРјРµСЃС‚СЂ",
     "content_type": 17,
     "codename": "delete_semester"
   }
@@ -5871,7 +5871,7 @@
   "model": "auth.permission",
   "pk": 68,
   "fields": {
-    "name": "Can view Семестр",
+    "name": "Can view РЎРµРјРµСЃС‚СЂ",
     "content_type": 17,
     "codename": "view_semester"
   }
@@ -5880,7 +5880,7 @@
   "model": "auth.group",
   "pk": 1,
   "fields": {
-    "name": "Адміністратор",
+    "name": "РђРґРјС–РЅС–СЃС‚СЂР°С‚РѕСЂ",
     "permissions": [
       1,
       2,
@@ -5925,7 +5925,7 @@
   "model": "auth.group",
   "pk": 2,
   "fields": {
-    "name": "Секретар",
+    "name": "РЎРµРєСЂРµС‚Р°СЂ",
     "permissions": []
   }
 },
@@ -5933,7 +5933,7 @@
   "model": "auth.group",
   "pk": 3,
   "fields": {
-    "name": "Вчитель",
+    "name": "Р’С‡РёС‚РµР»СЊ",
     "permissions": []
   }
 },
@@ -5941,7 +5941,7 @@
   "model": "auth.group",
   "pk": 4,
   "fields": {
-    "name": "Учень",
+    "name": "РЈС‡РµРЅСЊ",
     "permissions": []
   }
 },
@@ -5952,7 +5952,7 @@
     "password": "pbkdf2_sha256$260000$vJJONtVMSF3khDubnn4V8z$HTZlibArMFV8tAeIg05Ry4y3aJRA4Eae4wrIaUfEBXU=",
     "last_login": "2021-08-16T08:32:10.197Z",
     "is_superuser": true,
-    "username": "Адмін",
+    "username": "РђРґРјС–РЅ",
     "first_name": "",
     "last_name": "",
     "email": "",
@@ -5972,7 +5972,7 @@
     "password": "pbkdf2_sha256$260000$tc6xwI8gsHzu7fT1Z7spis$OI8D3XCOvqsH9j628mmOavQhLAGzPtzIqHc0fV4N4kU=",
     "last_login": "2021-08-19T19:17:57.165Z",
     "is_superuser": false,
-    "username": "Секретар",
+    "username": "РЎРµРєСЂРµС‚Р°СЂ",
     "first_name": "",
     "last_name": "",
     "email": "",
@@ -5992,7 +5992,7 @@
     "password": "pbkdf2_sha256$260000$58vbAwwPXD9Fp8ZyfO5gdO$ve8PTfRWCcJgRPZDUirPurx10Ss3EMkQDI4jhYL5Th0=",
     "last_login": "2021-08-19T19:26:09.867Z",
     "is_superuser": false,
-    "username": "Наталія",
+    "username": "РќР°С‚Р°Р»С–СЏ",
     "first_name": "",
     "last_name": "",
     "email": "",
@@ -6012,7 +6012,7 @@
     "password": "pbkdf2_sha256$260000$USKxqm06v1B9LwfaVebG9y$Z62IoChLCnvzbhpRO832I84PBsjuDUr1D54OgwgOWwA=",
     "last_login": "2021-08-19T19:31:12.015Z",
     "is_superuser": false,
-    "username": "Тарас",
+    "username": "РўР°СЂР°СЃ",
     "first_name": "",
     "last_name": "",
     "email": "",
@@ -6032,7 +6032,7 @@
     "password": "pbkdf2_sha256$260000$vgB8zOiyiVrErW7HQsSazw$7/jg8ioDmBBaoiuyidRBQ0eR7Zy/y7QRGPiHTYCHlq0=",
     "last_login": null,
     "is_superuser": false,
-    "username": "Ірина",
+    "username": "Р†СЂРёРЅР°",
     "first_name": "",
     "last_name": "",
     "email": "",
@@ -6052,7 +6052,7 @@
     "password": "pbkdf2_sha256$260000$4Fy8MuKh8BdaHb37SnpWeE$vYJbniCCF0uuc/O5ti5zi1vdmGSLC9aHF/rHn5KiRuQ=",
     "last_login": null,
     "is_superuser": false,
-    "username": "Максим",
+    "username": "РњР°РєСЃРёРј",
     "first_name": "",
     "last_name": "",
     "email": "",
@@ -6269,11 +6269,11 @@
   "model": "teachers.teacher",
   "pk": 7,
   "fields": {
-    "name": "Наталія",
-    "so_name": "Манчук",
-    "second_name": "Володимирівна",
+    "name": "РќР°С‚Р°Р»С–СЏ",
+    "so_name": "РњР°РЅС‡СѓРє",
+    "second_name": "Р’РѕР»РѕРґРёРјРёСЂС–РІРЅР°",
     "date": "2021-02-03",
-    "address": "Шевченко 32/3",
+    "address": "РЁРµРІС‡РµРЅРєРѕ 32/3",
     "user_id": 70
   }
 },
@@ -6281,11 +6281,11 @@
   "model": "teachers.teacher",
   "pk": 11,
   "fields": {
-    "name": "Ірина",
-    "so_name": "Азьома",
-    "second_name": "Валеріївна",
+    "name": "Р†СЂРёРЅР°",
+    "so_name": "РђР·СЊРѕРјР°",
+    "second_name": "Р’Р°Р»РµСЂС–С—РІРЅР°",
     "date": "2021-07-26",
-    "address": "Генерала Петрова 3/1",
+    "address": "Р“РµРЅРµСЂР°Р»Р° РџРµС‚СЂРѕРІР° 3/1",
     "user_id": 78
   }
 },
@@ -6293,56 +6293,56 @@
   "model": "teachers.subject",
   "pk": 1,
   "fields": {
-    "name": "Інформатіка"
+    "name": "Р†РЅС„РѕСЂРјР°С‚С–РєР°"
   }
 },
 {
   "model": "teachers.subject",
   "pk": 2,
   "fields": {
-    "name": "Алгебра"
+    "name": "РђР»РіРµР±СЂР°"
   }
 },
 {
   "model": "teachers.subject",
   "pk": 3,
   "fields": {
-    "name": "Геометрія"
+    "name": "Р“РµРѕРјРµС‚СЂС–СЏ"
   }
 },
 {
   "model": "teachers.subject",
   "pk": 4,
   "fields": {
-    "name": "Математика"
+    "name": "РњР°С‚РµРјР°С‚РёРєР°"
   }
 },
 {
   "model": "teachers.subject",
   "pk": 7,
   "fields": {
-    "name": "Україньська мова"
+    "name": "РЈРєСЂР°С—РЅСЊСЃСЊРєР° РјРѕРІР°"
   }
 },
 {
   "model": "teachers.subject",
   "pk": 8,
   "fields": {
-    "name": "Україньська література"
+    "name": "РЈРєСЂР°С—РЅСЊСЃСЊРєР° Р»С–С‚РµСЂР°С‚СѓСЂР°"
   }
 },
 {
   "model": "teachers.subject",
   "pk": 9,
   "fields": {
-    "name": "Історія України"
+    "name": "Р†СЃС‚РѕСЂС–СЏ РЈРєСЂР°С—РЅРё"
   }
 },
 {
   "model": "teachers.subject",
   "pk": 11,
   "fields": {
-    "name": "Англійська"
+    "name": "РђРЅРіР»С–Р№СЃСЊРєР°"
   }
 },
 {
@@ -6396,42 +6396,42 @@
   "model": "teachers.marktype",
   "pk": 1,
   "fields": {
-    "type": "Тематична"
+    "type": "РўРµРјР°С‚РёС‡РЅР°"
   }
 },
 {
   "model": "teachers.marktype",
   "pk": 2,
   "fields": {
-    "type": "Звичайна"
+    "type": "Р—РІРёС‡Р°Р№РЅР°"
   }
 },
 {
   "model": "teachers.marktype",
   "pk": 3,
   "fields": {
-    "type": "Перший семестр"
+    "type": "РџРµСЂС€РёР№ СЃРµРјРµСЃС‚СЂ"
   }
 },
 {
   "model": "teachers.marktype",
   "pk": 4,
   "fields": {
-    "type": "Річна"
+    "type": "Р С–С‡РЅР°"
   }
 },
 {
   "model": "teachers.marktype",
   "pk": 5,
   "fields": {
-    "type": "Другий семестр"
+    "type": "Р”СЂСѓРіРёР№ СЃРµРјРµСЃС‚СЂ"
   }
 },
 {
   "model": "teachers.topic",
   "pk": 14,
   "fields": {
-    "topic": "Повторення курсу 8 класу",
+    "topic": "РџРѕРІС‚РѕСЂРµРЅРЅСЏ РєСѓСЂСЃСѓ 8 РєР»Р°СЃСѓ",
     "start": "2021-08-10",
     "finish": "2021-08-19",
     "class_teacher": 14
@@ -6581,7 +6581,7 @@
   "pk": 2,
   "fields": {
     "class_num": 9,
-    "class_letter": "б",
+    "class_letter": "Р±",
     "year": "2021-09-01",
     "class_teacher": 7
   }
@@ -6600,11 +6600,11 @@
   "model": "students.student",
   "pk": 2,
   "fields": {
-    "name": "Тарас",
-    "so_name": "Б'ялик",
-    "second_name": "Васильович",
+    "name": "РўР°СЂР°СЃ",
+    "so_name": "Р‘'СЏР»РёРє",
+    "second_name": "Р’Р°СЃРёР»СЊРѕРІРёС‡",
     "date": "2007-03-15",
-    "address": "Варненська 17/4",
+    "address": "Р’Р°СЂРЅРµРЅСЃСЊРєР° 17/4",
     "user_id": 75,
     "journal_id": 2
   }
@@ -6613,11 +6613,11 @@
   "model": "students.student",
   "pk": 3,
   "fields": {
-    "name": "Максим",
-    "so_name": "Черненко",
-    "second_name": "Петров",
+    "name": "РњР°РєСЃРёРј",
+    "so_name": "Р§РµСЂРЅРµРЅРєРѕ",
+    "second_name": "РџРµС‚СЂРѕРІ",
     "date": "2006-07-28",
-    "address": "Варненьська 20/1",
+    "address": "Р’Р°СЂРЅРµРЅСЊСЃСЊРєР° 20/1",
     "user_id": 79,
     "journal_id": 2
   }
