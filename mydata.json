@@ -5265,6 +5265,240 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 406,
+  "fields": {
+    "action_time": "2021-08-21T06:35:48.709Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "5-A",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 407,
+  "fields": {
+    "action_time": "2021-08-21T06:35:52.485Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "9-Б",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 408,
+  "fields": {
+    "action_time": "2021-08-21T06:35:58.922Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 409,
+  "fields": {
+    "action_time": "2021-08-21T06:36:17.164Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Ірина Азьома Валеріївна",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 410,
+  "fields": {
+    "action_time": "2021-08-21T06:36:17.250Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Наталія Манчук Володимирівна",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 411,
+  "fields": {
+    "action_time": "2021-08-21T06:36:25.162Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Інформатіка",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 412,
+  "fields": {
+    "action_time": "2021-08-21T06:36:25.244Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Історія України",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 413,
+  "fields": {
+    "action_time": "2021-08-21T06:36:25.324Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Алгебра",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 414,
+  "fields": {
+    "action_time": "2021-08-21T06:36:25.369Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Англійська",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 415,
+  "fields": {
+    "action_time": "2021-08-21T06:36:25.432Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Геометрія",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 416,
+  "fields": {
+    "action_time": "2021-08-21T06:36:25.498Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Математика",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 417,
+  "fields": {
+    "action_time": "2021-08-21T06:36:25.565Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Україньська література",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 418,
+  "fields": {
+    "action_time": "2021-08-21T06:36:25.636Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Україньська мова",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 419,
+  "fields": {
+    "action_time": "2021-08-21T06:36:38.582Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "76",
+    "object_repr": "2021-08-06",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 420,
+  "fields": {
+    "action_time": "2021-08-21T06:36:59.602Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "78",
+    "object_repr": "Ірина",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 421,
+  "fields": {
+    "action_time": "2021-08-21T06:36:59.679Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "79",
+    "object_repr": "Максим",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 422,
+  "fields": {
+    "action_time": "2021-08-21T06:36:59.754Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "70",
+    "object_repr": "Наталія",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 423,
+  "fields": {
+    "action_time": "2021-08-21T06:36:59.829Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "75",
+    "object_repr": "Тарас",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -5986,86 +6220,6 @@
   }
 },
 {
-  "model": "auth.user",
-  "pk": 70,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$58vbAwwPXD9Fp8ZyfO5gdO$ve8PTfRWCcJgRPZDUirPurx10Ss3EMkQDI4jhYL5Th0=",
-    "last_login": "2021-08-19T19:26:09.867Z",
-    "is_superuser": false,
-    "username": "Наталія",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-07-20T14:54:13.679Z",
-    "groups": [
-      3
-    ],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 75,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$USKxqm06v1B9LwfaVebG9y$Z62IoChLCnvzbhpRO832I84PBsjuDUr1D54OgwgOWwA=",
-    "last_login": "2021-08-19T19:31:12.015Z",
-    "is_superuser": false,
-    "username": "Тарас",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-07-22T07:21:59.371Z",
-    "groups": [
-      4
-    ],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 78,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$vgB8zOiyiVrErW7HQsSazw$7/jg8ioDmBBaoiuyidRBQ0eR7Zy/y7QRGPiHTYCHlq0=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "Ірина",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-07-26T17:03:51Z",
-    "groups": [
-      3
-    ],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 79,
-  "fields": {
-    "password": "pbkdf2_sha256$260000$4Fy8MuKh8BdaHb37SnpWeE$vYJbniCCF0uuc/O5ti5zi1vdmGSLC9aHF/rHn5KiRuQ=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "Максим",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2021-07-28T11:22:11Z",
-    "groups": [
-      4
-    ],
-    "user_permissions": []
-  }
-},
-{
   "model": "contenttypes.contenttype",
   "pk": 1,
   "fields": {
@@ -6266,133 +6420,6 @@
   }
 },
 {
-  "model": "teachers.teacher",
-  "pk": 7,
-  "fields": {
-    "name": "Наталія",
-    "so_name": "Манчук",
-    "second_name": "Володимирівна",
-    "date": "2021-02-03",
-    "address": "Шевченко 32/3",
-    "user_id": 70
-  }
-},
-{
-  "model": "teachers.teacher",
-  "pk": 11,
-  "fields": {
-    "name": "Ірина",
-    "so_name": "Азьома",
-    "second_name": "Валеріївна",
-    "date": "2021-07-26",
-    "address": "Генерала Петрова 3/1",
-    "user_id": 78
-  }
-},
-{
-  "model": "teachers.subject",
-  "pk": 1,
-  "fields": {
-    "name": "Інформатіка"
-  }
-},
-{
-  "model": "teachers.subject",
-  "pk": 2,
-  "fields": {
-    "name": "Алгебра"
-  }
-},
-{
-  "model": "teachers.subject",
-  "pk": 3,
-  "fields": {
-    "name": "Геометрія"
-  }
-},
-{
-  "model": "teachers.subject",
-  "pk": 4,
-  "fields": {
-    "name": "Математика"
-  }
-},
-{
-  "model": "teachers.subject",
-  "pk": 7,
-  "fields": {
-    "name": "Україньська мова"
-  }
-},
-{
-  "model": "teachers.subject",
-  "pk": 8,
-  "fields": {
-    "name": "Україньська література"
-  }
-},
-{
-  "model": "teachers.subject",
-  "pk": 9,
-  "fields": {
-    "name": "Історія України"
-  }
-},
-{
-  "model": "teachers.subject",
-  "pk": 11,
-  "fields": {
-    "name": "Англійська"
-  }
-},
-{
-  "model": "teachers.teachersubjects",
-  "pk": 2,
-  "fields": {
-    "teacher_id": 7,
-    "subjects": [
-      1
-    ]
-  }
-},
-{
-  "model": "teachers.teachersubjects",
-  "pk": 6,
-  "fields": {
-    "teacher_id": 11,
-    "subjects": [
-      11
-    ]
-  }
-},
-{
-  "model": "teachers.classteacher",
-  "pk": 12,
-  "fields": {
-    "subject_id": 11,
-    "journal_id": 5,
-    "teacher_id": 6
-  }
-},
-{
-  "model": "teachers.classteacher",
-  "pk": 13,
-  "fields": {
-    "subject_id": 1,
-    "journal_id": 5,
-    "teacher_id": 2
-  }
-},
-{
-  "model": "teachers.classteacher",
-  "pk": 14,
-  "fields": {
-    "subject_id": 1,
-    "journal_id": 2,
-    "teacher_id": 2
-  }
-},
-{
   "model": "teachers.marktype",
   "pk": 1,
   "fields": {
@@ -6428,229 +6455,11 @@
   }
 },
 {
-  "model": "teachers.topic",
-  "pk": 14,
-  "fields": {
-    "topic": "Повторення курсу 8 класу",
-    "start": "2021-08-10",
-    "finish": "2021-08-19",
-    "class_teacher": 14
-  }
-},
-{
-  "model": "teachers.semester",
-  "pk": 76,
-  "fields": {
-    "start": "2021-08-06",
-    "finish": "2021-08-12",
-    "semester": 3
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 111,
-  "fields": {
-    "student": 2,
-    "date": "2021-08-18",
-    "mark": 10,
-    "teacher": 14,
-    "subject": 1,
-    "type": 2,
-    "topic": 14
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 114,
-  "fields": {
-    "student": 3,
-    "date": "2021-08-18",
-    "mark": 9,
-    "teacher": 14,
-    "subject": 1,
-    "type": 2,
-    "topic": 14
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 115,
-  "fields": {
-    "student": 2,
-    "date": "2021-08-19",
-    "mark": 10,
-    "teacher": 14,
-    "subject": 1,
-    "type": 1,
-    "topic": 14
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 116,
-  "fields": {
-    "student": 3,
-    "date": "2021-08-19",
-    "mark": 9,
-    "teacher": 14,
-    "subject": 1,
-    "type": 1,
-    "topic": 14
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 117,
-  "fields": {
-    "student": 2,
-    "date": "2021-08-19",
-    "mark": 10,
-    "teacher": 14,
-    "subject": 1,
-    "type": 3,
-    "topic": null
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 118,
-  "fields": {
-    "student": 3,
-    "date": "2021-08-19",
-    "mark": 9,
-    "teacher": 14,
-    "subject": 1,
-    "type": 3,
-    "topic": null
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 132,
-  "fields": {
-    "student": 2,
-    "date": "2021-08-19",
-    "mark": 10,
-    "teacher": 14,
-    "subject": 1,
-    "type": 5,
-    "topic": null
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 133,
-  "fields": {
-    "student": 2,
-    "date": "2021-08-19",
-    "mark": 10,
-    "teacher": 14,
-    "subject": 1,
-    "type": 4,
-    "topic": null
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 134,
-  "fields": {
-    "student": 3,
-    "date": "2021-08-19",
-    "mark": 9,
-    "teacher": 14,
-    "subject": 1,
-    "type": 5,
-    "topic": null
-  }
-},
-{
-  "model": "teachers.mark",
-  "pk": 135,
-  "fields": {
-    "student": 3,
-    "date": "2021-08-19",
-    "mark": 9,
-    "teacher": 14,
-    "subject": 1,
-    "type": 4,
-    "topic": null
-  }
-},
-{
-  "model": "students.schooljournal",
-  "pk": 2,
-  "fields": {
-    "class_num": 9,
-    "class_letter": "б",
-    "year": "2021-09-01",
-    "class_teacher": 7
-  }
-},
-{
-  "model": "students.schooljournal",
-  "pk": 5,
-  "fields": {
-    "class_num": 5,
-    "class_letter": "a",
-    "year": "2021-09-01",
-    "class_teacher": 11
-  }
-},
-{
-  "model": "students.student",
-  "pk": 2,
-  "fields": {
-    "name": "Тарас",
-    "so_name": "Б'ялик",
-    "second_name": "Васильович",
-    "date": "2007-03-15",
-    "address": "Варненська 17/4",
-    "user_id": 75,
-    "journal_id": 2
-  }
-},
-{
-  "model": "students.student",
-  "pk": 3,
-  "fields": {
-    "name": "Максим",
-    "so_name": "Черненко",
-    "second_name": "Петров",
-    "date": "2006-07-28",
-    "address": "Варненьська 20/1",
-    "user_id": 79,
-    "journal_id": 2
-  }
-},
-{
   "model": "students.classsubjects",
   "pk": 3,
   "fields": {
     "class_num": 9,
-    "subjects": [
-      1,
-      9,
-      2,
-      11,
-      3,
-      8,
-      7
-    ]
-  }
-},
-{
-  "model": "students.classsubjects",
-  "pk": 4,
-  "fields": {
-    "class_num": 5,
-    "subjects": [
-      1,
-      9,
-      11,
-      4,
-      8,
-      7
-    ]
+    "subjects": []
   }
 }
 ]
