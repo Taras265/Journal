@@ -17,7 +17,7 @@ class Teacher(models.Model):
     user_id = models.OneToOneField(User, unique=True, on_delete=models.CASCADE, verbose_name='Індефікатор')
 
     def __str__(self):
-        return self.name + ' ' + self.so_name + ' ' + self.second_name
+        return self.so_name + ' ' + self.name + ' ' + self.second_name
 
     class Meta:
         verbose_name = 'Вчитель'
