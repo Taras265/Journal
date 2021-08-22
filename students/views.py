@@ -1,10 +1,11 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from teachers.models import ClassTeacher, Teacher, TeacherSubjects, Mark, \
     SchoolJournal, Student, Subject, MarkType
 import datetime
 from teachers.models import Topic
 from students.models import ClassSubjects
+from django.contrib import messages
 
 now = datetime.datetime.now()
 
@@ -27,37 +28,42 @@ def journal_detail(request, pk=None):
         user_student = Student.objects.get(user_id=user)
         context = {}
         subject = Subject.objects.get(pk=pk)
-        class_teacher = ClassTeacher.objects.get(subject_id=subject,
-                                                 journal_id=user_student.journal_id)
-        topics = []
-        topic_list = []
-        for i in Topic.objects.filter(class_teacher=class_teacher):
-            topic_list.append(i.id)
-            topics.append(i)
-        if topic_list:
-            topic_list = max(topic_list)
+        if not ClassTeacher.objects.filter(subject_id=subject,
+                                                     journal_id=user_student.journal_id):
+            messages.error(request, 'Ще немає вчителя цього предмету!')
+            return redirect('/students')
         else:
-            topic_list = 1
-        page = request.GET.get('topic') or topic_list
-        topic = Topic.objects.filter(pk=int(page))
-        if topic:
-            topic = topic[0]
-            dates = set()
-            marks_not_clear = Mark.objects.filter(teacher=class_teacher,
-                                                  subject=class_teacher.subject_id,
-                                                  topic=topic,
-                                                  student=user_student)
-            for mark in marks_not_clear:
-                if mark.type != MarkType.objects.get(pk=1):
-                    dates.add(mark.date)
-            dates = sorted(dates)
-            context.update({'dates': dates, 'topics': topics, 'page': topic,
-                            'class_teacher': class_teacher,
-                            'student': user_student})
-        else:
-            context.update({'topics': topics, 'class_teacher': class_teacher,
-                            'student': user_student})
-        return render(request, 'students/journal_detail.html', context)
+            class_teacher = ClassTeacher.objects.get(subject_id=subject,
+                                                     journal_id=user_student.journal_id)
+            topics = []
+            topic_list = []
+            for i in Topic.objects.filter(class_teacher=class_teacher):
+                topic_list.append(i.id)
+                topics.append(i)
+            if topic_list:
+                topic_list = max(topic_list)
+            else:
+                topic_list = 1
+            page = request.GET.get('topic') or topic_list
+            topic = Topic.objects.filter(pk=int(page))
+            if topic:
+                topic = topic[0]
+                dates = set()
+                marks_not_clear = Mark.objects.filter(teacher=class_teacher,
+                                                      subject=class_teacher.subject_id,
+                                                      topic=topic,
+                                                      student=user_student)
+                for mark in marks_not_clear:
+                    if mark.type != MarkType.objects.get(pk=1):
+                        dates.add(mark.date)
+                dates = sorted(dates)
+                context.update({'dates': dates, 'topics': topics, 'page': topic,
+                                'class_teacher': class_teacher,
+                                'student': user_student})
+            else:
+                context.update({'topics': topics, 'class_teacher': class_teacher,
+                                'student': user_student})
+            return render(request, 'students/journal_detail.html', context)
 
 
 @login_required
