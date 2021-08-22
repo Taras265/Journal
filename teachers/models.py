@@ -60,8 +60,8 @@ class ClassTeacher(models.Model):
                                    related_name='class_teacher', verbose_name='Вчитель')
 
     def __str__(self):
-        return self.teacher_id.teacher_id.name + ' ' + \
-               self.teacher_id.teacher_id.so_name + ' ' + \
+        return self.teacher_id.teacher_id.so_name + ' ' + \
+               self.teacher_id.teacher_id.name + ' ' + \
                self.teacher_id.teacher_id.second_name + \
                ' - вчитель ' \
                + str(self.journal_id.class_num) + '-' + self.journal_id.class_letter.upper()
