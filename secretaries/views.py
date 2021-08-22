@@ -201,29 +201,12 @@ class JournalListView(LoginRequiredMixin, ListView):
 
 @login_required()
 def class_teacher_list(request):
-    if request.method == 'POST':
-        qs = ClassTeacher.objects.all()
-        context = {'class_teachers': qs, 'form': form}
-        if form.is_valid():
-            try:
-                qs = []
-                q = ClassTeacher.objects.all()
-                for i in q:
-                    if i.journal_id.class_num == form.cleaned_data['class_num']:
-                        qs.append(i)
-                if not qs:
-                    qs = ClassTeacher.objects.all()
-                    messages.error(request, 'Такої паралелі немає!')
-                context = {'class_teachers': qs}
-            except ValueError as e:
-                messages.error(request, e)
-                return render(request, 'secretaries/class_teacher_list.html', context)
-            return render(request, 'secretaries/class_teacher_list.html', context)
-        return render(request, 'secretaries/class_teacher_list.html', context)
-    else:
-        qs = ClassTeacher.objects.all()
-        context = {'class_teachers': qs}
-        return render(request, 'secretaries/class_teacher_list.html', context)
+    qs = ClassTeacher.objects.all()
+    classes = set()
+    for q in qs:
+        classes.add(q.journal_)
+    context = {'class_teachers': classes}
+    return render(request, 'secretaries/class_teacher_list.html', context)
 
 
 class ClassSubjectsListView(LoginRequiredMixin, ListView):
