@@ -78,7 +78,11 @@ class ClassTeacherForm(forms.ModelForm):
         subject_id = self.cleaned_data.get("subject_id")
         journal_id = self.cleaned_data.get("journal_id")
         teacher_id = self.cleaned_data.get("teacher_id")
+        if not ClassSubjects.objects.filter(class_num=journal_id.class_num):
+            raise forms.ValidationError('Ви не додали предмети цієЇ паралелі!')
         class_subjects = ClassSubjects.objects.get(class_num=journal_id.class_num)
+        if ClassTeacher.objects.filter(journal_id=journal_id, subject_id=subject_id):
+            raise forms.ValidationError('Вже є такий вчитель у класі!')
         if not list(class_subjects.subjects.filter(name=str(subject_id))):
             raise forms.ValidationError('Предмет не вірен!')
         if not list(teacher_id.subjects.filter(name=subject_id.name)):

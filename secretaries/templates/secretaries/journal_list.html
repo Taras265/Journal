@@ -6,6 +6,7 @@
     <div class="row">
         <div class="col-md">
             <h1>Журнали</h1>
+            {% if page_obj %}
             <table class="table table-striped">
                 <thead>
                   <tr>
@@ -53,7 +54,7 @@
           {% endfor %}
         </li>
       </ul>
-    </nav>
+    </nav>{% endif %}
 {% else %}
     {% include '403.html' %}
 {% endif %}
