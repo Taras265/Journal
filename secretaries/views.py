@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 from accounts.forms import UserRegistrationForm
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DeleteView, UpdateView, CreateView
-from teachers.forms import TeacherForm, TeacherSubjectsForm, SubjectForm,\
+from teachers.forms import TeacherForm, TeacherSubjectsForm, SubjectForm, \
     ClassTeacherForm, FindTeacherForm
 from teachers.models import Teacher, TeacherSubjects, Subject, ClassTeacher
 from students.forms import StudentForm, JournalForm, ClassSubjectsForm, FindStudentForm
@@ -202,10 +202,13 @@ class JournalListView(LoginRequiredMixin, ListView):
 @login_required()
 def class_teacher_list(request):
     qs = ClassTeacher.objects.all()
-    classes = set()
+    data = []
+    classes = []
     for q in qs:
-        classes.add(q)
-    context = {'class_teachers': sorted(classes)}
+        if str(q.journal_id) not in classes:
+            data.append(q)
+            classes.append(str(q.journal_id))
+    context = {'class_teachers': data}
     return render(request, 'secretaries/class_teacher_list.html', context)
 
 
