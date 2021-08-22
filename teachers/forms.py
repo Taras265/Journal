@@ -4,7 +4,7 @@ from teachers.models import Subject, TeacherSubjects, Teacher, ClassTeacher, Mar
     Mark, Topic, Semester
 from students.models import SchoolJournal, ClassSubjects, Student
 
-group = Group.objects.all()#get(name='Вчитель')
+group = Group.objects.get(name='Вчитель')
 
 
 class SubjectForm(forms.ModelForm):
@@ -17,7 +17,7 @@ class SubjectForm(forms.ModelForm):
 
 
 class TeacherForm(forms.ModelForm):
-    user_id = forms.ModelChoiceField(queryset=group,#.user_set.all(),
+    user_id = forms.ModelChoiceField(queryset=group.user_set.all(),
                                      label='Додати користувачу',
                                      widget=forms.Select(attrs={'class': 'form-control',
                                                                 'placeholder': 'Додати користувачу'}))

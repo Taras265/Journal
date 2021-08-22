@@ -5,11 +5,11 @@ from teachers.models import Teacher
 
 from teachers.models import Subject
 
-group = Group.objects.all()#get(name='Учень')
+group = Group.objects.get(name='Учень')
 
 
 class StudentForm(forms.ModelForm):
-    user_id = forms.ModelChoiceField(queryset=group,#.user_set.all(),
+    user_id = forms.ModelChoiceField(queryset=group.user_set.all(),
                                      label='Додати користувачу',
                                      widget=forms.Select(attrs={'class': 'form-control',
                                                                 'placeholder': 'Додати користувачу'}))
