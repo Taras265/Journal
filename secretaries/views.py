@@ -204,8 +204,8 @@ def class_teacher_list(request):
     qs = ClassTeacher.objects.all()
     classes = set()
     for q in qs:
-        classes.add(q.journal_)
-    context = {'class_teachers': classes}
+        classes.add(q)
+    context = {'class_teachers': sorted(classes)}
     return render(request, 'secretaries/class_teacher_list.html', context)
 
 
