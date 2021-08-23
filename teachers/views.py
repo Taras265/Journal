@@ -149,14 +149,20 @@ def card(request, pk=None):
         first_year = MarkType.objects.get(pk=3)
         second_year = MarkType.objects.get(pk=5)
         year = MarkType.objects.get(pk=4)
+        if len(list(Mark.objects.filter(
+                teacher=ClassTeacher.objects.get(id=pk).id,
+                type__in=[MarkType.objects.get(pk=3),
+                          MarkType.objects.get(pk=5)]))) < 2:
+            semester = True
+        else:
+            semester = False
+        print(Mark.objects.filter(type=year))
         data = {'first': list(Mark.objects.filter(type=first_year)),
                 'second': Mark.objects.filter(type=second_year),
                 'year': Mark.objects.filter(type=year),
                 'class_teacher': class_teacher,
                 'students': Student.objects.filter(journal_id=class_teacher.journal_id.id),
-                'semester': list(Mark.objects.filter(teacher=ClassTeacher.objects.get(id=pk).id,
-                                                     type__in=[MarkType.objects.get(pk=3),
-                                                               MarkType.objects.get(pk=5)]))}
+                'semester': semester}
         return render(request, 'teachers/card.html', data)
 
 
