@@ -194,6 +194,7 @@ def add_semester(request, pk=None):
                     if form_mark.is_valid():
                         form_mark.save()
                     if len(list(Mark.objects.filter(
+                            student=student,
                             teacher=ClassTeacher.objects.get(id=pk).id,
                             type__in=[MarkType.objects.get(pk=3),
                                       MarkType.objects.get(pk=5)]))) % 2 == 0:
