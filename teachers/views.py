@@ -28,6 +28,8 @@ def journal_detail(request, pk=None):
             if data:
                 student = Student.objects.get(pk=int(data['student']))
                 date = data['date']
+                if not date:
+                    date = now.date()
                 teacher = ClassTeacher.objects.get(pk=int(data['teacher']))
                 subject = Subject.objects.get(pk=int(data['subject']))
                 type_mark = MarkType.objects.get(pk=2)
@@ -87,7 +89,6 @@ def mark_add(request, pk):
                 form.save()
                 messages.success(request, "Оцінка збережена")
                 return redirect('/teachers/journal/' + str(pk) + '/')
-            print(form)
             messages.error(request, "Ви не усе ввели для додання оцінки, або данні не верні!")
             return redirect('/teachers/journal/' + str(pk) + '/')
         messages.error(request, "Нема данних для додання оцінки!!")
