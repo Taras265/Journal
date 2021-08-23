@@ -193,10 +193,10 @@ def add_semester(request, pk=None):
                     form_mark = AddMark(data)
                     if form_mark.is_valid():
                         form_mark.save()
-                    if Mark.objects.filter(
+                    if len(list(Mark.objects.filter(
                             teacher=ClassTeacher.objects.get(id=pk).id,
                             type__in=[MarkType.objects.get(pk=3),
-                                      MarkType.objects.get(pk=5)]):
+                                      MarkType.objects.get(pk=5)]))) % 2 == 0:
                         data['type'] = MarkType.objects.get(pk=4)
                         mark_sum = 0
                         for mark in (Mark.objects.filter(
