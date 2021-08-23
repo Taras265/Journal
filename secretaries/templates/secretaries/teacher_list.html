@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% load secretaries_tags %}
 
+
 {% block content %}
+<style>
+.invise { color: transparent; }
+</style>
 {% if request.user|secretary %}
     <div class="row">
         <div class="col-md">
@@ -13,6 +17,9 @@
                     <button type="submit" class="btn btn-primary">Шукати</button>
                 </form>
             </div>
+            <input type="button" class="btn btn-primary"
+                   onclick="printDiv('printableArea')"
+                   value="Печатати вчителів" />
             <table class="table table-striped">
                 <thead>
                   <tr>
@@ -30,7 +37,6 @@
                 </thead>
                 <tbody>
                     {% for object in page_obj %}
-                      <tr>
                           <td>
                             {{ object.teacher_id.user_id }}
                         </td>
@@ -71,8 +77,7 @@
                     {% endfor %}
                 </tbody>
               </table>
-        </div>
-    </div>
+            </div>
     <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li class="page-item">
@@ -82,7 +87,62 @@
           {% endfor %}
         </li>
       </ul>
-    </nav>{% endif %}
+    </nav>
+        <div class="invisible">
+            <div id="printableArea">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                      <th scope="col">Логін</th>
+                      <th scope="col">Iм'я</th>
+                      <th scope="col">Прізвище</th>
+                      <th scope="col">По батькові</th>
+                      <th scope="col">Дата народження</th>
+                      <th scope="col">Адреса</th>
+                      <th scope="col">Предмети</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for object in all %}
+                          <td>
+                            {{ object.teacher_id.user_id }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.name }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.so_name }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.second_name }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.date }}
+                        </td>
+                        <td>
+                            {{ object.teacher_id.address }}
+                        </td>
+                        <td>{% for subject in object.subjects.all %}
+                            <p>{{subject}}</p>
+                        {% endfor %}</td>
+                      </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+            </div>
+        </div></div>
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>{% endif %}
 {% else %}
     {% include '403.html' %}
 {% endif %}

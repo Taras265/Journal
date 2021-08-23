@@ -3,6 +3,9 @@
 
 {% block content %}
 {% if request.user|secretary %}
+<style>
+.invise { color: transparent; }
+</style>
     <div class="row">
         <div class="col-md">
             <h1>Учні</h1>
@@ -13,6 +16,9 @@
                     <button type="submit" class="btn btn-primary">Шукати</button>
                 </form>
             </div>
+            <input type="button" class="btn btn-primary"
+                   onclick="printDiv('printableArea')"
+                   value="Печатати учнів" />
             <table class="table table-striped">
                 <thead>
                   <tr>
@@ -75,7 +81,61 @@
           {% endfor %}
         </li>
       </ul>
-    </nav>{% endif %}
+    </nav>
+<div class="invisible">
+    <div id="printableArea">
+        <table class="table table-striped">
+                <thead>
+                  <tr>
+                      <th scope="col">Логін</th>
+                      <th scope="col">Iм'я</th>
+                      <th scope="col">Прізвище</th>
+                      <th scope="col">По батькові</th>
+                      <th scope="col">Дата народження</th>
+                      <th scope="col">Адреса</th>
+                      <th scope="col">Журнал</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for object in all %}
+                      <tr>
+                          <td>
+                            {{ object.user_id }}
+                        </td>
+                        <td>
+                            {{ object.name }}
+                        </td>
+                        <td>
+                            {{ object.so_name }}
+                        </td>
+                        <td>
+                            {{ object.second_name }}
+                        </td>
+                        <td>
+                            {{ object.date }}
+                        </td>
+                        <td>
+                            {{ object.address }}
+                        </td>
+                        <td>{{ object.journal_id }}</td>
+                      </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+    </div>
+</div>
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>{% endif %}
 {% else %}
     {% include '403.html' %}
 {% endif %}

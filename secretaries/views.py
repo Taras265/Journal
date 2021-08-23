@@ -121,10 +121,11 @@ def teacher_info_list(request):
     if request.method == 'POST':
         form = FindTeacherForm(request.POST)
         qs = TeacherSubjects.objects.all()
-        lst = Paginator(qs, 5)
+        lst = Paginator(qs, 15)
         page_number = request.GET.get('page')
         page_obj = lst.get_page(page_number)
-        context = {'page_obj': page_obj, 'form': form}
+        context = {'page_obj': page_obj, 'form': form,
+                   'all': qs}
         if form.is_valid():
             try:
                 qs = []
@@ -134,10 +135,11 @@ def teacher_info_list(request):
                 if not qs:
                     qs = TeacherSubjects.objects.all()
                     messages.error(request, 'Такого вчителя немає!')
-                lst = Paginator(qs, 5)
+                lst = Paginator(qs, 15)
                 page_number = request.GET.get('page')
                 page_obj = lst.get_page(page_number)
-                context = {'page_obj': page_obj, 'form': form}
+                context = {'page_obj': page_obj, 'form': form,
+                           'all': qs}
             except ValueError as e:
                 messages.error(request, e)
                 return render(request, 'secretaries/teacher_list.html', context)
@@ -146,10 +148,11 @@ def teacher_info_list(request):
     else:
         qs = TeacherSubjects.objects.all()
         form = FindTeacherForm()
-        lst = Paginator(qs, 5)
+        lst = Paginator(qs, 15)
         page_number = request.GET.get('page')
         page_obj = lst.get_page(page_number)
-        context = {'page_obj': page_obj, 'form': form}
+        context = {'page_obj': page_obj, 'form': form,
+                   'all': qs}
         return render(request, 'secretaries/teacher_list.html', context)
 
 
@@ -164,20 +167,22 @@ def student_info_list(request):
     if request.method == 'POST':
         form = FindStudentForm(request.POST)
         qs = Student.objects.all()
-        lst = Paginator(qs, 5)
+        lst = Paginator(qs, 15)
         page_number = request.GET.get('page')
         page_obj = lst.get_page(page_number)
-        context = {'page_obj': page_obj, 'form': form}
+        context = {'page_obj': page_obj, 'form': form,
+                   'all': qs}
         if form.is_valid():
             try:
                 qs = Student.objects.filter(journal_id=form.cleaned_data['journal_id'])
                 if not qs:
                     qs = Student.objects.all()
                     messages.error(request, 'Такого учня немає!')
-                lst = Paginator(qs, 5)
+                lst = Paginator(qs, 15)
                 page_number = request.GET.get('page')
                 page_obj = lst.get_page(page_number)
-                context = {'page_obj': page_obj, 'form': form}
+                context = {'page_obj': page_obj, 'form': form,
+                           'all': qs}
             except ValueError as e:
                 messages.error(request, e)
                 return render(request, 'secretaries/student_list.html', context)
@@ -186,10 +191,11 @@ def student_info_list(request):
     else:
         qs = Student.objects.all()
         form = FindStudentForm()
-        lst = Paginator(qs, 5)
+        lst = Paginator(qs, 15)
         page_number = request.GET.get('page')
         page_obj = lst.get_page(page_number)
-        context = {'page_obj': page_obj, 'form': form}
+        context = {'page_obj': page_obj, 'form': form,
+                   'all': qs}
         return render(request, 'secretaries/student_list.html', context)
 
 

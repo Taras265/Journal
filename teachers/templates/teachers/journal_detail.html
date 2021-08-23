@@ -47,6 +47,12 @@
     <a href="card/">
         <button type="button" class="btn btn-primary">Табель</button>
     </a>
+    {% if dates %}
+        <input type="button" class="btn btn-primary"
+                   onclick="printDiv('printableArea')"
+                   value="Печатати оцінки" />
+    {% endif %}
+    <div id="printableArea">
     <table class="table table-bordered table-striped">
         <thead>
     <tr>
@@ -98,7 +104,20 @@
       {% endfor %}
   </tbody>
     </table>
+    </div>
   {% endif %}
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
 {% else %}
     {% include '403.html' %}
 {% endif %}
