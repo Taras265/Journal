@@ -87,6 +87,7 @@ def mark_add(request, pk):
                 form.save()
                 messages.success(request, "Оцінка збережена")
                 return redirect('/teachers/journal/' + str(pk) + '/')
+            print(form)
             messages.error(request, "Ви не усе ввели для додання оцінки, або данні не верні!")
             return redirect('/teachers/journal/' + str(pk) + '/')
         messages.error(request, "Нема данних для додання оцінки!!")
