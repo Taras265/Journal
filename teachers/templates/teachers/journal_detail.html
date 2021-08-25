@@ -6,7 +6,15 @@
     {% if form|form %}
     <div class="alert alert-success" role="alert">
         <h6>Оцінка учня {{student}}</h6>
-        {% include "form.html" with button="Додати" action="add/mark/" %}
+        <div class="row">
+            <form action="{{ action }}" method="post">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Додати</button>
+                <a href="/teachers/journal/{{page.class_teacher.id}}/">
+                    <button type="button" class="btn btn-danger">Скасувати</button>
+                </a>
+            </form>
+        </div>
     </div>
     {% endif %}
     <h1>Журнал {{page.class_teacher.journal_id}}</h1>
