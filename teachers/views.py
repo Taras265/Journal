@@ -42,6 +42,7 @@ def journal_detail(request, pk=None):
                     'topic': Topic.objects.get(pk=int(data['topic']))
                 })
                 context['form'] = form
+                context['student'] = student
         class_teacher = ClassTeacher.objects.get(id=pk)
         topics = []
         topic_list = []

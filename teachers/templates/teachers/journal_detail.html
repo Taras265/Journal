@@ -5,6 +5,7 @@
 {% if request.user|teacher %}
     {% if form|form %}
     <div class="alert alert-success" role="alert">
+        <h6>Оцінка для учня {{student}}</h6>
         {% include "form.html" with button="Додати" action="add/mark/" %}
     </div>
     {% endif %}
