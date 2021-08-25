@@ -97,7 +97,7 @@ class ClassTeacherForm(forms.ModelForm):
 class AddMark(forms.ModelForm):
     student = forms.ModelChoiceField(queryset=Student.objects.all(), widget=forms.HiddenInput())
     date = forms.DateField(widget=forms.HiddenInput())
-    mark = forms.IntegerField(label="Оцінка", widget=forms.NumberInput(
+    mark = forms.IntegerField(label="Оцінка" + str(student.queryset), widget=forms.NumberInput(
         attrs=
         {'class': 'form-control'}))
     teacher = forms.ModelChoiceField(queryset=ClassTeacher.objects.all(), widget=forms.HiddenInput())
