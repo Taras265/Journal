@@ -13,10 +13,11 @@ def teacher(user):
     return True if group in user.groups.all() else False
 
 
-@register.filter
-def mark_filter(date, student):
+@register.simple_tag
+def mark_filter(date, topic, student):
     simple_mark = MarkType.objects.get(pk=2)
-    marks = Mark.objects.filter(student=student.id, date=date, type=simple_mark)
+    marks = Mark.objects.filter(
+        topic=topic, student=student.id, date=date, type=simple_mark)
     if marks:
         return True
     return False

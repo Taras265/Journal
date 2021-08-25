@@ -67,7 +67,8 @@
       <tr>
       <th scope="row">{{student}}</th>
       {% for date in dates %}
-      {% if date|mark_filter:student %}
+          {% mark_filter date page student as mark_q %}
+      {% if mark_q %}
         <td>{%get_simple_mark date page student%}</td>
       {% elif page.finish %}
           <td>---</td>
