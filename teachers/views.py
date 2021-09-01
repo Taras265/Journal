@@ -70,7 +70,8 @@ def journal_detail(request, pk=None):
             heads = sorted(heads)
             if topic.finish:
                 heads.append('Тематична')
-            elif not heads or heads[-1] != now.strftime("%d.%m.%y"):
+            elif now.strftime("%d.%m.%y") not in heads:
+                print(heads)
                 heads.append('Сьогодні')
             context.update({'students': Student.objects.filter(
                 journal_id=class_teacher.journal_id.id),
