@@ -209,9 +209,12 @@ def add_semester(request, pk=None):
                     for mark in Mark.objects.filter(student=student,
                                                     type=MarkType.objects.get(pk=1)):
                         mark_sum += int(mark.mark)
-                    mark_sum = int(mark_sum / len(list(Mark.objects.filter(
-                        student=student,
-                        type=MarkType.objects.get(pk=1)))))
+                    if mark_sum > 0:
+                        mark_sum = int(mark_sum / len(list(Mark.objects.filter(
+                            student=student,
+                            type=MarkType.objects.get(pk=1)))))
+                    else:
+                        mark_sum = 0
                     data['mark'] = mark_sum
                     form_mark = AddMark(data)
                     if form_mark.is_valid():
