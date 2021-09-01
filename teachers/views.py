@@ -62,7 +62,9 @@ def journal_detail(request, pk=None):
             marks_not_clear = Mark.objects.filter(teacher=class_teacher,
                                                   subject=class_teacher.subject_id,
                                                   topic=topic)
+            print_tf = False
             for mark in marks_not_clear:
+                print_tf = True
                 if mark.type != MarkType.objects.get(pk=1):
                     dates.add(mark.date)
                     heads.add(mark.date.strftime("%d.%m.%y"))
@@ -75,9 +77,12 @@ def journal_detail(request, pk=None):
             context.update({'students': Student.objects.filter(
                 journal_id=class_teacher.journal_id.id),
                 'dates': dates, 'topics': topics, 'page': topic,
-                'class_teacher': class_teacher, 'heads': heads})
+                'class_teacher': class_teacher, 'heads': heads,
+                'print': print_tf
+            })
         else:
-            context.update({'topics': topics, 'class_teacher': class_teacher})
+            context.update({'topics': topics, 'class_teacher': class_teacher,
+                            'print': False})
         return render(request, 'teachers/journal_detail.html', context)
 
 
