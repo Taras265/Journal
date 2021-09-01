@@ -53,7 +53,9 @@ def date_today(t):
 @register.filter
 def topical_mark(topic, student):
     type_mark = MarkType.objects.get(pk=1)
-    return Mark.objects.get(student=student.id, topic=topic, type=type_mark).mark
+    if Mark.objects.get(student=student.id, topic=topic, type=type_mark).mark > 0:
+        return Mark.objects.get(student=student.id, topic=topic, type=type_mark).mark
+    return 'Н.З.'
 
 
 @register.filter

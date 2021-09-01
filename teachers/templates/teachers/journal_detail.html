@@ -7,10 +7,10 @@
     <div class="alert alert-success" role="alert">
         <h6>Оцінка учня {{student}}</h6>
         <div class="row">
-            <form action="{{ action }}" method="post">{% csrf_token %}
+            <form action="/teachers/journal/{{page.class_teacher.id}}/add/mark/" method="post">{% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="btn btn-primary">Додати</button>
-                <a href="/teachers/journal/{{page.class_teacher.id}}/">
+                <a href="/teachers/journal/{{page.class_teacher.id}}">
                     <button type="button" class="btn btn-danger">Скасувати</button>
                 </a>
             </form>
@@ -38,6 +38,10 @@
           </div>
         </div>
       </div>
+    <form action="/teachers/journal/{{page.class_teacher.id}}/remake/topic/" method="post">{% csrf_token %}
+        <input type="hidden" name="save" value="{{page.pk}}">
+        <button type="submit" class="btn btn-primary">Зменити назву теми</button>
+    </form>
     {% endif %}
     <form method="post" action="add/topic/"> {% csrf_token %}
           <input type="hidden" name="class_teacher" value="{{ class_teacher.id }}">

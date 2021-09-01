@@ -27,7 +27,7 @@ def journal_detail(request, pk=None):
             data = request.POST
             if data:
                 student = Student.objects.get(pk=int(data['student']))
-                date = data['date']
+                date = now.date()
                 if not date:
                     date = now.date()
                 teacher = ClassTeacher.objects.get(pk=int(data['teacher']))
@@ -117,6 +117,26 @@ def create_topic(request, pk=None):
 
 
 @login_required
+def remake_topic(request, pk=None):
+    if pk:
+        if request.method == 'POST':
+            data = request.POST
+            if 'save' not in data:
+                model = Topic.objects.get(id=data['id'])
+                model.topic = data['input']
+                model.save()
+                messages.success(request, 'Тема змінена!')
+                return redirect('/teachers/journal/' + str(pk) + '/')
+            else:
+                model = Topic.objects.get(pk=int(data['save']))
+            return render(request, 'teachers/reform.html', {'input': model.topic,
+                                                            'id': model.id})
+        else:
+            messages.error(request, 'Нема данних!')
+        return redirect('/teachers/journal/' + str(pk) + '/')
+
+
+@login_required
 def topical_mark_add(request, pk=None):
     if pk:
         if request.method == 'POST':
@@ -132,9 +152,12 @@ def topical_mark_add(request, pk=None):
                 for mark in Mark.objects.filter(student=student.id,
                                                 topic=data_form['topic']):
                     mark_sum += int(mark.mark)
-                data_form['mark'] = int(mark_sum / len(list(Mark.objects.filter(
-                    student=student.id,
-                    topic=Topic.objects.get(pk=data_form['topic'].id)))))
+                if mark_sum != 0:
+                    data_form['mark'] = int(mark_sum / len(list(Mark.objects.filter(
+                        student=student.id,
+                        topic=Topic.objects.get(pk=data_form['topic'].id)))))
+                else:
+                    data_form['mark'] = 0
                 if not Topic.objects.get(id=data_form['topic'].id).finish:
                     mark_form = AddMark(data_form)
                     mark_form.save()
