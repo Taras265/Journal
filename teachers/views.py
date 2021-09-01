@@ -204,6 +204,11 @@ def add_semester(request, pk=None):
                 }
                 for student in Student.objects.filter(
                         journal_id=ClassTeacher.objects.get(pk=pk).journal_id):
+                    if len(list(Mark.objects.filter(
+                            student=student,
+                            type=MarkType.objects.get(pk=1)))):
+                        messages.error(request, 'Нема тематичних оцінок!')
+                        return redirect('/teachers/journal/' + str(pk) + '/card/')
                     data['student'] = student
                     mark_sum = 0
                     for mark in Mark.objects.filter(student=student,
