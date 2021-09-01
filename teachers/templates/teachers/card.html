@@ -25,7 +25,11 @@
         {% if first %}
         {% for mark in first %}
             {% if mark.student == student %}
-                <td>{{mark.mark}}</td>
+                {% if mark.mark > 0 %}
+                    <td>{{mark.mark}}</td>
+                {% else %}
+                    <td>НЗ</td>
+                {% endif %}
             {% endif %}
         {% endfor %}
         {% else %}
@@ -34,7 +38,11 @@
         {% if second %}
         {% for mark in second %}
             {% if mark.student == student %}
-                <td>{{mark.mark}}</td>
+                {% if mark.mark > 0 %}
+                    <td>{{mark.mark}}</td>
+                {% else %}
+                    <td>НЗ</td>
+                {% endif %}
             {% endif %}
         {% endfor %}
         {% else %}
@@ -43,7 +51,11 @@
         {% if year %}
         {% for mark in year %}
             {% if mark.student == student %}
-                <td>{{mark.mark}}</td>
+                {% if mark.mark > 0 %}
+                    <td>{{mark.mark}}</td>
+                {% else %}
+                    <td>НЗ</td>
+                {% endif %}
             {% endif %}
         {% endfor %}
         {% else %}
