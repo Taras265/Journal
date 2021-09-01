@@ -1,3 +1,4 @@
+import random
 from django import forms
 from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.hashers import check_password
@@ -29,8 +30,8 @@ class UserLoginForm(forms.Form):
 class UserRegistrationForm(forms.ModelForm):
     username = forms.CharField(label='Логін', widget=forms.TextInput(attrs={'class': 'form-control',
                                                                             'placeholder': 'Логін'}))
-    password = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'form-control',
-                                                                                 'placeholder': 'Пароль'}))
+    password = forms.CharField(label='Пароль', widget=forms.TextInput(attrs={'class': 'form-control',
+                                                                             'placeholder': 'Пароль'}))
     password2 = forms.CharField(label='Пароль ще раз', widget=forms.PasswordInput(attrs={'class': 'form-control',
                                                                                          'placeholder': 'Пароль'}))
 

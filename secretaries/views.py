@@ -1,3 +1,5 @@
+import random
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -22,6 +24,10 @@ def home(request):
 
 @login_required
 def add_teacher(request):
+    chars = '+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+    password = ''
+    for i in range(random.randint(8, 15)):
+        password += random.choice(chars)
     data = request.method
     if data == 'POST':
         form = UserRegistrationForm(request.POST)
@@ -36,12 +42,18 @@ def add_teacher(request):
             return redirect('/secretaries/add/teacher/info')
         return render(request, 'secretaries/create.html', {'form': form})
     else:
-        form = UserRegistrationForm()
+        form = UserRegistrationForm(initial={
+            'password': password
+        })
         return render(request, 'secretaries/create.html', {'form': form})
 
 
 @login_required
 def add_student(request):
+    chars = '+-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
+    password = ''
+    for i in range(random.randint(8, 15)):
+        password += random.choice(chars)
     data = request.method
     if data == 'POST':
         form = UserRegistrationForm(request.POST)
@@ -56,7 +68,9 @@ def add_student(request):
             return redirect('/secretaries/add/student/info')
         return render(request, 'secretaries/create.html', {'form': form})
     else:
-        form = UserRegistrationForm()
+        form = UserRegistrationForm(initial={
+            'password': password,
+        })
         return render(request, 'secretaries/create.html', {'form': form})
 
 
