@@ -180,10 +180,9 @@ def card(request, pk=None):
             semester = True
         else:
             semester = False
-        print(Mark.objects.filter(type=year))
-        data = {'first': list(Mark.objects.filter(type=first_year)),
-                'second': Mark.objects.filter(type=second_year),
-                'year': Mark.objects.filter(type=year),
+        data = {'first': list(Mark.objects.filter(type=first_year, teacher=pk)),
+                'second': Mark.objects.filter(type=second_year, teacher=pk),
+                'year': Mark.objects.filter(type=year, teacher=pk),
                 'class_teacher': class_teacher,
                 'students': Student.objects.filter(journal_id=class_teacher.journal_id.id),
                 'semester': semester}
