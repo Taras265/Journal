@@ -28,8 +28,6 @@ def journal_detail(request, pk=None):
             if data:
                 student = Student.objects.get(pk=int(data['student']))
                 date = now.date()
-                if not date:
-                    date = now.date()
                 teacher = ClassTeacher.objects.get(pk=int(data['teacher']))
                 subject = Subject.objects.get(pk=int(data['subject']))
                 type_mark = MarkType.objects.get(pk=2)

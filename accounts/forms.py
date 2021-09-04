@@ -34,6 +34,8 @@ class UserRegistrationForm(forms.ModelForm):
                                                                              'placeholder': 'Пароль'}))
     password2 = forms.CharField(label='Пароль ще раз', widget=forms.PasswordInput(attrs={'class': 'form-control',
                                                                                          'placeholder': 'Пароль'}))
+    email = forms.EmailField(label='Email', widget=forms.EmailInput(attrs={'class': 'form-control',
+                                                                           'placeholder': 'Email'}))
 
     def clean_password2(self):
         data = self.cleaned_data
@@ -43,4 +45,4 @@ class UserRegistrationForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('username',)
+        fields = ('username', 'email')
