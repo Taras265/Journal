@@ -5,7 +5,7 @@
 {% if request.user|teacher %}
     {% if form|form %}
     <div class="alert alert-success" role="alert">
-        <h6>Оцінка учня {{student}}</h6>
+        <h6>Оцінка для учня {{student}}</h6>
         <div class="row">
             <form action="/teachers/journal/{{page.class_teacher.id}}/add/mark/" method="post">{% csrf_token %}
                 {{ form.as_p }}
@@ -41,6 +41,12 @@
     <form action="/teachers/journal/{{page.class_teacher.id}}/remake/topic/" method="post">{% csrf_token %}
         <input type="hidden" name="save" value="{{page.pk}}">
         <button type="submit" class="btn btn-primary">Змiнити назву теми</button>
+    </form>
+    <form method="post">{% csrf_token %}
+        <input type="hidden" name="teacher" value="{{ class_teacher.id }}">
+        <input type="hidden" name="subject" value="{{ class_teacher.subject_id.id }}">
+        <input type="hidden" name="topic" value="{{ page.id }}">
+        <button type="submit" class="btn btn-primary">Додати оцінку</button>
     </form>
     {% endif %}
     <form method="post" action="add/topic/"> {% csrf_token %}

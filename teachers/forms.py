@@ -111,6 +111,26 @@ class AddMark(forms.ModelForm):
         fields = '__all__'
 
 
+class AddMarkBy(forms.ModelForm):
+    date = forms.DateField(label='Дата', widget=forms.DateInput(attrs=
+                                                  {'class': 'form-control'}))
+    student = forms.ModelChoiceField(label='Учень', queryset=Student.objects.all(),
+                                     widget=forms.Select(attrs=
+                                                         {'class': 'form-control'}))
+    mark = forms.IntegerField(label="Оцінка", widget=forms.NumberInput(
+        attrs=
+        {'class': 'form-control'}))
+    teacher = forms.ModelChoiceField(queryset=ClassTeacher.objects.all(), widget=forms.HiddenInput())
+    subject = forms.ModelChoiceField(queryset=Subject.objects.all(), widget=forms.HiddenInput())
+    type = forms.ModelChoiceField(queryset=MarkType.objects.all(), widget=forms.HiddenInput())
+    topic = forms.ModelChoiceField(queryset=Topic.objects.all(), widget=forms.HiddenInput(),
+                                   required=False)
+
+    class Meta:
+        model = Mark
+        fields = '__all__'
+
+
 class TopicForm(forms.ModelForm):
     topic = forms.CharField(label="Тема", widget=forms.TextInput(attrs={'class': 'form-control',
                                                                         'placeholder': "Тема"}))

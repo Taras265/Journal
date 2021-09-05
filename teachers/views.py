@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from teachers.models import ClassTeacher, Teacher, TeacherSubjects, Mark, \
     SchoolJournal, Student, Subject, MarkType
-from teachers.forms import AddMark, TopicForm, SemesterForm
+from teachers.forms import AddMark, TopicForm, SemesterForm, AddMarkBy
 import datetime
 from teachers.models import Topic
 
@@ -26,21 +26,33 @@ def journal_detail(request, pk=None):
         if request.method == 'POST':
             data = request.POST
             if data:
-                student = Student.objects.get(pk=int(data['student']))
-                date = now.date()
-                teacher = ClassTeacher.objects.get(pk=int(data['teacher']))
-                subject = Subject.objects.get(pk=int(data['subject']))
-                type_mark = MarkType.objects.get(pk=2)
-                form = AddMark(initial={
-                    'student': student,
-                    'date': date,
-                    'teacher': teacher,
-                    'subject': subject,
-                    'type': type_mark,
-                    'topic': Topic.objects.get(pk=int(data['topic']))
-                })
-                context['form'] = form
-                context['student'] = student
+                if 'student' in data:
+                    student = Student.objects.get(pk=int(data['student']))
+                    date = now.date()
+                    teacher = ClassTeacher.objects.get(pk=int(data['teacher']))
+                    subject = Subject.objects.get(pk=int(data['subject']))
+                    type_mark = MarkType.objects.get(pk=2)
+                    form = AddMark(initial={
+                        'student': student,
+                        'date': date,
+                        'teacher': teacher,
+                        'subject': subject,
+                        'type': type_mark,
+                        'topic': Topic.objects.get(pk=int(data['topic']))
+                    })
+                    context['form'] = form
+                    context['student'] = student
+                else:
+                    teacher = ClassTeacher.objects.get(pk=int(data['teacher']))
+                    subject = Subject.objects.get(pk=int(data['subject']))
+                    type_mark = MarkType.objects.get(pk=2)
+                    form = AddMarkBy(initial={
+                        'teacher': teacher,
+                        'subject': subject,
+                        'type': type_mark,
+                        'topic': Topic.objects.get(pk=int(data['topic']))
+                    })
+                    context['form'] = form
         class_teacher = ClassTeacher.objects.get(id=pk)
         topics = []
         topic_list = []
