@@ -192,7 +192,7 @@ def card(request, pk=None):
         if 0 < len(list(Mark.objects.filter(
                 teacher=ClassTeacher.objects.get(id=pk).id,
                 type__in=[MarkType.objects.get(pk=3),
-                          MarkType.objects.get(pk=5)]))) % 3 == 0:
+                          MarkType.objects.get(pk=5)]))) % 2 == 0:
             semester = False
         else:
             semester = True
