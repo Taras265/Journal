@@ -168,9 +168,8 @@ def topical_mark_add(request, pk=None):
                                                 topic=data_form['topic']):
                     mark_sum += int(mark.mark)
                 if mark_sum != 0:
-                    data_form['mark'] = int(mark_sum / len(list(Mark.objects.filter(
-                        student=student.id,
-                        topic=Topic.objects.get(pk=data_form['topic'].id)))))
+                    data_form['mark'] = int(mark_sum / len(list(Mark.objects.filter(student=student.id,
+                                                                                    topic=data_form['topic']))))
                 else:
                     data_form['mark'] = 0
                 if not Topic.objects.get(id=data_form['topic'].id).finish:
@@ -188,13 +187,13 @@ def card(request, pk=None):
         first_year = MarkType.objects.get(pk=3)
         second_year = MarkType.objects.get(pk=5)
         year = MarkType.objects.get(pk=4)
-        if len(list(Mark.objects.filter(
+        if 0 < len(list(Mark.objects.filter(
                 teacher=ClassTeacher.objects.get(id=pk).id,
                 type__in=[MarkType.objects.get(pk=3),
                           MarkType.objects.get(pk=5)]))) % 3 == 0:
-            semester = True
-        else:
             semester = False
+        else:
+            semester = True
         data = {'first': list(Mark.objects.filter(type=first_year, teacher=pk)),
                 'second': Mark.objects.filter(type=second_year, teacher=pk),
                 'year': Mark.objects.filter(type=year, teacher=pk),
@@ -219,9 +218,12 @@ def add_semester(request, pk=None):
                 }
                 for student in Student.objects.filter(
                         journal_id=ClassTeacher.objects.get(pk=pk).journal_id):
+                    print(Mark.objects.filter(
+                        student=student,
+                        type=MarkType.objects.get(pk=1)))
                     if len(list(Mark.objects.filter(
                             student=student,
-                            type=MarkType.objects.get(pk=1)))):
+                            type=MarkType.objects.get(pk=1)))) <= 0:
                         messages.error(request, 'Нема тематичних оцінок!')
                         return redirect('/teachers/journal/' + str(pk) + '/card/')
                     data['student'] = student
@@ -254,7 +256,8 @@ def add_semester(request, pk=None):
                         if mark_sum > 0:
                             mark_sum = int(mark_sum / len(list(Mark.objects.filter(
                                 student=student,
-                                type=MarkType.objects.get(pk=1)))))
+                                type__in=[MarkType.objects.get(pk=3),
+                                          MarkType.objects.get(pk=5)]))))
                         else:
                             mark_sum = 0
                         data['mark'] = mark_sum
