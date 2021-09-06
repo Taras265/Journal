@@ -1,3 +1,5 @@
+from math import ceil
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
@@ -168,7 +170,7 @@ def topical_mark_add(request, pk=None):
                                                 topic=data_form['topic']):
                     mark_sum += int(mark.mark)
                 if mark_sum != 0:
-                    data_form['mark'] = round(mark_sum / len(list(Mark.objects.filter(student=student.id,
+                    data_form['mark'] = ceil(mark_sum / len(list(Mark.objects.filter(student=student.id,
                                                                                     topic=data_form['topic']))))
                 else:
                     data_form['mark'] = 0
@@ -232,7 +234,7 @@ def add_semester(request, pk=None):
                                                     type=MarkType.objects.get(pk=1)):
                         mark_sum += int(mark.mark)
                     if mark_sum > 0:
-                        mark_sum = round(mark_sum / len(list(Mark.objects.filter(
+                        mark_sum = ceil(mark_sum / len(list(Mark.objects.filter(
                             student=student,
                             type=MarkType.objects.get(pk=1)))))
                     else:
@@ -254,7 +256,7 @@ def add_semester(request, pk=None):
                                           MarkType.objects.get(pk=5)])):
                             mark_sum += int(mark.mark)
                         if mark_sum > 0:
-                            mark_sum = round(mark_sum / len(list(Mark.objects.filter(
+                            mark_sum = ceil(mark_sum / len(list(Mark.objects.filter(
                                 student=student,
                                 type__in=[MarkType.objects.get(pk=3),
                                           MarkType.objects.get(pk=5)]))))
