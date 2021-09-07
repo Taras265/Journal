@@ -18,6 +18,7 @@
     </div>
     {% endif %}
     <h1>Журнал {{page.class_teacher.journal_id}}</h1>
+    <br>
     {% if topics %}
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item">
@@ -38,23 +39,40 @@
           </div>
         </div>
       </div>
+        <br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
     <form action="/teachers/journal/{{page.class_teacher.id}}/remake/topic/" method="post">{% csrf_token %}
         <input type="hidden" name="save" value="{{page.pk}}">
         <button type="submit" class="btn btn-primary">Змiнити назву теми</button>
     </form>
+            </div>
+    {% if print %}
+            <div class="col">
+        <input type="button" class="btn btn-primary"
+                   onclick="printDiv('printableArea')"
+                   value="Печатати оцінки" />
+            </div>
+    {% endif %}
+            <div class="col">
     <form method="post">{% csrf_token %}
         <input type="hidden" name="teacher" value="{{ class_teacher.id }}">
         <input type="hidden" name="subject" value="{{ class_teacher.subject_id.id }}">
         <input type="hidden" name="topic" value="{{ page.id }}">
         <button type="submit" class="btn btn-primary">Додати оцінку</button>
     </form>
+            </div>
     {% endif %}
+            <div class="col">
     <form method="post" action="add/topic/"> {% csrf_token %}
           <input type="hidden" name="class_teacher" value="{{ class_teacher.id }}">
           <button type="submit" class="btn btn-primary">Нова тема</button>
     </form>
+            </div>
     {% if topics %}
     {% if not page.finish %}
+            <div class="col">
         <form method="post" action="add/topical_mark/"> {% csrf_token %}
             <input type="hidden" name="date" value="{{ page.finish }}">
             <input type="hidden" name="teacher" value="{{ class_teacher.id }}">
@@ -62,15 +80,17 @@
             <input type="hidden" name="topic" value="{{ page.id }}">
             <button type="submit" class="btn btn-primary">Розрахувати тематичну</button>
         </form>
+            </div>
+        <br>
     {% endif %}
+            <div class="col">
     <a href="card/">
         <button type="button" class="btn btn-primary">Табель</button>
     </a>
-    {% if print %}
-        <input type="button" class="btn btn-primary"
-                   onclick="printDiv('printableArea')"
-                   value="Печатати оцінки" />
-    {% endif %}
+            </div>
+    <br>
+    </div>
+    </div>
     <div id="printableArea">
     <table class="table table-bordered table-striped">
         <thead>
