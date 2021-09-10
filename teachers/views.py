@@ -104,8 +104,14 @@ def mark_add(request, pk):
         if request.method == 'POST':
             form = AddMark(request.POST)
             if form.is_valid():
-                form.save()
-                messages.success(request, "Оцінка збережена")
+                dates = []
+                for mark in Mark.objects.filter(student=request.POST.copy()['student']):
+                    dates.append(mark.date)
+                if request.POST.copy()['date'] in dates:
+                    form.save()
+                    messages.success(request, "Оцінка збережена")
+                    return redirect('/teachers/journal/' + str(pk) + '/')
+                messages.error(request, "За цей день вже є така оцінка!")
                 return redirect('/teachers/journal/' + str(pk) + '/')
             messages.error(request, "Ви не усе ввели для додання оцінки, або данні не верні!")
             return redirect('/teachers/journal/' + str(pk) + '/')
