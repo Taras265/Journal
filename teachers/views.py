@@ -15,10 +15,12 @@ now = datetime.datetime.now()
 @login_required()
 def home(request):
     user_id = request.user.id
-    info_id = Teacher.objects.get(user_id=user_id)
-    teacher_id = TeacherSubjects.objects.get(teacher_id=info_id)
-    journals = ClassTeacher.objects.filter(teacher_id=teacher_id)
-    return render(request, 'teachers/home.html', {'journals': journals})
+    info_id = Teacher.objects.filter(user_id=user_id)
+    if info_id:
+        teacher_id = TeacherSubjects.objects.get(teacher_id=info_id[0])
+        journals = ClassTeacher.objects.filter(teacher_id=teacher_id)
+        return render(request, 'teachers/home.html', {'journals': journals})
+    return render(request, 'teachers/home.html')
 
 
 @login_required()
