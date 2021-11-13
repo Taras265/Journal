@@ -52,6 +52,6 @@ class ClassSubjects(models.Model):
         return str(self.class_num)
 
     class Meta:
-        verbose_name = 'Предмети классу'
-        verbose_name_plural = 'Предмети классу'
+        verbose_name = 'Предмети класу'
+        verbose_name_plural = 'Предмети класу'
         ordering = ['class_num']
