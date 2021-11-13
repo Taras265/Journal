@@ -47,8 +47,8 @@ class TeacherSubjects(models.Model):
         return u.name + ' ' + u.so_name + ' ' + u.second_name
 
     class Meta:
-        verbose_name = 'Сиписок предметiв'
-        verbose_name_plural = 'Сиписок предметiв'
+        verbose_name = 'Сиписок предметів'
+        verbose_name_plural = 'Сиписок предметів'
 
 
 class ClassTeacher(models.Model):
