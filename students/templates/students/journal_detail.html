@@ -46,7 +46,7 @@
       <tr>
       <th scope="row">{{student}}</th>
       {% for date in dates %}
-          <td>{{date|get_simple_mark:student}}</td>
+          <td>{%get_simple_mark date student page%}</td>
       {% endfor %}
       {% if page.finish %}
           <td>{{page|topical_mark:student}}</td>

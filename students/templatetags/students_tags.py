@@ -22,10 +22,11 @@ def mark_filter(date, student):
     return False
 
 
-@register.filter
-def get_simple_mark(date, student):
+@register.simple_tag
+def get_simple_mark(date, student, topic):
     simple_mark = MarkType.objects.get(pk=2)
-    mark = Mark.objects.get(student=student.id, date=date, type=simple_mark)
+    print(Mark.objects.filter(student=student.id, date=date, type=simple_mark, topic=topic))
+    mark = Mark.objects.get(student=student.id, date=date, type=simple_mark, topic=topic)
     return mark.mark
 
 
