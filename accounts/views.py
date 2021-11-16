@@ -34,12 +34,17 @@ def change_password(request):
         data = request.POST
         part = data['part']
         username = data['name']
-        user = User.objects.get(username=username)
+        user = User.objects.filter(username=username)
+        if user:
+            user = user[0]
+        else:
+            messages.error(request, 'Нема такого користувача!')
+            return redirect('/accounts/login')
         if part == '2':
             code = data['code']
             smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
             smtpObj.starttls()
-            smtpObj.login('journal.for.school100@gmail.com', '/1/z/2/x/')
+            smtpObj.login('journal.for.school100@gmail.com', '1234_qaz')
             smtpObj.sendmail("journal.for.school100@gmail.com", user.email, 'Your code - '+str(code))
             code = data['code']
             part = '3'
