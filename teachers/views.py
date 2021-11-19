@@ -104,10 +104,9 @@ def journal_detail(request, pk=None):
 def mark_add(request, pk):
     if pk:
         if request.method == 'POST':
-            data = list(request.POST)
-            if not data['date']:
-                data['date'] = datetime.date()
-            form = AddMark(request.POST)
+            data = request.POST.copy()
+            data['date'] = now.date()
+            form = AddMark(data)
             if form.is_valid():
                 if not Topic.objects.get(pk=int(request.POST.copy()['topic'])).finish:
                     dates = []
@@ -121,7 +120,7 @@ def mark_add(request, pk):
                     return redirect('/teachers/journal/' + str(pk) + '/')
                 messages.error(request, "Тема закінчена!")
                 return redirect('/teachers/journal/' + str(pk) + '/')
-            messages.error(request, "Ви не усе ввели для додання оцінки, або данні не верні!" + str(request.POST))
+            messages.error(request, "Ви не усе ввели для додання оцінки, або данні не верні!")
             return redirect('/teachers/journal/' + str(pk) + '/')
         messages.error(request, "Нема данних для додання оцінки!!")
         return redirect('/teachers/journal/' + str(pk) + '/')
