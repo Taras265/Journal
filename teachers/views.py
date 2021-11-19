@@ -118,7 +118,7 @@ def mark_add(request, pk):
                     return redirect('/teachers/journal/' + str(pk) + '/')
                 messages.error(request, "Тема закінчена!")
                 return redirect('/teachers/journal/' + str(pk) + '/')
-            messages.error(request, "Ви не усе ввели для додання оцінки, або данні не верні!")
+            messages.error(request, "Ви не усе ввели для додання оцінки, або данні не верні!" + str(request.POST))
             return redirect('/teachers/journal/' + str(pk) + '/')
         messages.error(request, "Нема данних для додання оцінки!!")
         return redirect('/teachers/journal/' + str(pk) + '/')
