@@ -234,18 +234,17 @@ def add_semester(request, pk=None):
                 }
                 for student in Student.objects.filter(
                         journal_id=ClassTeacher.objects.get(pk=pk).journal_id):
-                    print(Mark.objects.filter(
-                        student=student,
-                        type=MarkType.objects.get(pk=1)))
                     if len(list(Mark.objects.filter(
                             student=student,
-                            type=MarkType.objects.get(pk=1)))) <= 0:
+                            type=MarkType.objects.get(pk=1),
+                            teacher=ClassTeacher.objects.get(id=pk).id))) <= 0:
                         messages.error(request, 'Нема тематичних оцінок!')
                         return redirect('/teachers/journal/' + str(pk) + '/card/')
                     data['student'] = student
                     mark_sum = 0
                     for mark in Mark.objects.filter(student=student,
-                                                    type=MarkType.objects.get(pk=1)):
+                                                    type=MarkType.objects.get(pk=1),
+                                                    teacher=ClassTeacher.objects.get(id=pk).id):
                         mark_sum += int(mark.mark)
                     if mark_sum > 0:
                         mark_sum = ceil(mark_sum / len(list(Mark.objects.filter(
@@ -267,13 +266,15 @@ def add_semester(request, pk=None):
                         for mark in (Mark.objects.filter(
                                 student=student,
                                 type__in=[MarkType.objects.get(pk=3),
-                                          MarkType.objects.get(pk=5)])):
+                                          MarkType.objects.get(pk=5)],
+                                teacher=ClassTeacher.objects.get(id=pk).id)):
                             mark_sum += int(mark.mark)
                         if mark_sum > 0:
                             mark_sum = ceil(mark_sum / len(list(Mark.objects.filter(
                                 student=student,
                                 type__in=[MarkType.objects.get(pk=3),
-                                          MarkType.objects.get(pk=5)]))))
+                                          MarkType.objects.get(pk=5)],
+                                teacher=ClassTeacher.objects.get(id=pk).id))))
                         else:
                             mark_sum = 0
                         data['mark'] = mark_sum
