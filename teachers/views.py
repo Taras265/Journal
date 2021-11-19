@@ -104,6 +104,9 @@ def journal_detail(request, pk=None):
 def mark_add(request, pk):
     if pk:
         if request.method == 'POST':
+            data = list(request.POST)
+            if not data['date']:
+                data['date'] = datetime.date()
             form = AddMark(request.POST)
             if form.is_valid():
                 if not Topic.objects.get(pk=int(request.POST.copy()['topic'])).finish:
