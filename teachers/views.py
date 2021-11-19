@@ -32,7 +32,8 @@ def journal_detail(request, pk=None):
             if data:
                 if 'student' in data:
                     student = Student.objects.get(pk=int(data['student']))
-                    date = now.date()
+                    print(data)
+                    date = data['date']
                     teacher = ClassTeacher.objects.get(pk=int(data['teacher']))
                     subject = Subject.objects.get(pk=int(data['subject']))
                     type_mark = MarkType.objects.get(pk=2)
@@ -46,7 +47,9 @@ def journal_detail(request, pk=None):
                     })
                     context['form'] = form
                     context['student'] = student
+                    print(2222222222222222)
                 else:
+                    print(111111111)
                     teacher = ClassTeacher.objects.get(pk=int(data['teacher']))
                     subject = Subject.objects.get(pk=int(data['subject']))
                     type_mark = MarkType.objects.get(pk=2)
