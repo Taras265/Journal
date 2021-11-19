@@ -249,7 +249,8 @@ def add_semester(request, pk=None):
                     if mark_sum > 0:
                         mark_sum = ceil(mark_sum / len(list(Mark.objects.filter(
                             student=student,
-                            type=MarkType.objects.get(pk=1)))))
+                            type=MarkType.objects.get(pk=1),
+                            teacher=ClassTeacher.objects.get(id=pk).id))))
                     else:
                         mark_sum = 0
                     data['mark'] = mark_sum
