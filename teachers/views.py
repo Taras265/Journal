@@ -105,7 +105,8 @@ def mark_add(request, pk):
     if pk:
         if request.method == 'POST':
             data = request.POST.copy()
-            data['date'] = now.date()
+            if not AddMark(data).is_valid():
+                data['date'] = now.date()
             form = AddMark(data)
             if form.is_valid():
                 if not Topic.objects.get(pk=int(request.POST.copy()['topic'])).finish:
