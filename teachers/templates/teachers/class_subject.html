@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load teachers_tags %}
+
+{% block content %}
+{% if request.user|teacher %}
+    <h1>Журнал {{page.class_teacher.journal_id}}</h1>
+    <br>
+    {% if topics %}
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+            {{page}}
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+             aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+              {% for topic in topics %}
+              <a href="?topic={{topic.id}}"
+                 class="list-group-item list-group-item-action">{{topic}}</a>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+        <br>
+    <div class="container">
+        <div class="row">
+    {% if print %}
+            <div class="col">
+        <input type="button" class="btn btn-primary"
+                   onclick="printDiv('printableArea')"
+                   value="Печатати оцінки" />
+            </div>
+    {% endif %}
+    {% endif %}
+            <div class="col">
+    <form method="post" action="add/topic/"> {% csrf_token %}
+          <input type="hidden" name="class_teacher" value="{{ class_teacher.id }}">
+          <button type="submit" class="btn btn-primary">Нова тема</button>
+    </form>
+            </div>
+    {% if topics %}
+    <br>
+    </div>
+    </div>
+    <br>
+    <div id="printableArea">
+    <table class="table table-bordered table-striped">
+        <thead>
+    <tr>
+      <th scope="col">Учень</th>
+      {% for date in heads %}
+        <th scope="col">{{date}}</th>
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+      {% for student in students %}
+      <tr>
+      <th scope="row">{{student}}</th>
+      {% for date in dates %}
+          {% mark_filter date page student as mark_q %}
+      {% if mark_q %}
+        <td>{%get_simple_mark date page student%}</td>
+      {% else %}
+          <td>---</td>
+      {% endif %}
+      {% endfor %}
+      {% if page.finish %}
+          <td>{{page|topical_mark:student}}</td>
+      {% else %}
+          <td>---</td>
+      {% endif %}
+      </tr>
+      {% endfor %}
+  </tbody>
+    </table>
+    </div>
+  {% endif %}
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

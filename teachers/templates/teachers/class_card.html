@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load teachers_tags %}
+{% load students_tags %}
+
+{% block content %}
+{% if request.user|teacher %}
+<h1>Табель</h1>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+        <th scope="col">Предмет</th>
+        <th scope="col">Перша семестрова</th>
+        <th scope="col">Другий семестрова</th>
+        <th scope="col">Річна</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for subject in subjects %}<tr>
+      <th scope="row">{{subject}}</th>
+      <td>{{first|subject_mark:subject}}</td>
+      <td>{{second|subject_mark:subject}}</td>
+      <td>{{year|subject_mark:subject}}</td>
+  </tr>{% endfor %}
+  </tbody>
+</table>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

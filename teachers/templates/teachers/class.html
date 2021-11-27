@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load teachers_tags %}
+
+{% block content %}
+{% if request.user|teacher %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h4 class="card-title">Предмети</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    {% for subject in subjects %}
+    <a class="list-group-item"
+       href="{% url 'teachers:class_subject' pk=subject.pk %}">{{ subject.subject_id }}</a>
+    {% endfor %}
+  </ul>
+  </div>
+    </div>
+<div class="col">
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h4 class="card-title">Табелі</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    {% for student in students %}
+    <a class="list-group-item"
+       href="{% url 'teachers:class_card' pk=student.pk %}">{{ student }}</a>
+    {% endfor %}
+  </ul>
+  </div>
+</div>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

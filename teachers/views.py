@@ -3,6 +3,8 @@ from math import ceil
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+
+from students.models import ClassSubjects
 from teachers.models import ClassTeacher, Teacher, TeacherSubjects, Mark, \
     SchoolJournal, Student, Subject, MarkType
 from teachers.forms import AddMark, TopicForm, SemesterForm, AddMarkBy
@@ -289,3 +291,100 @@ def add_semester(request, pk=None):
             return redirect('/teachers/journal/' + str(pk) + '/card/')
         form = SemesterForm()
         return render(request, 'teachers/create.html', {'form': form})
+
+
+def my_class(request):
+    user = request.user
+    teacher = Teacher.objects.get(user_id=user.pk)
+    if not SchoolJournal.objects.filter(class_teacher=teacher):
+        messages.error(request, 'Ви не класний керівник!')
+        return redirect('/teachers/')
+    teacher_s = TeacherSubjects.objects.get(teacher_id=teacher.id)
+    class_teacher = ClassTeacher.objects.get(teacher_id=teacher_s.id)
+    journal = SchoolJournal.objects.get(class_teacher=teacher)
+    subjects_class = ClassSubjects.objects.get(class_num=journal.class_num)
+    subjects = []
+    for subject in subjects_class.subjects.all():
+        ct = ClassTeacher.objects.filter(journal_id=journal.id, subject_id=subject.id)
+        if ct:
+            subjects.append(ct[0])
+    student = list(Student.objects.filter(journal_id=class_teacher.journal_id.id))
+    print(subjects[0].pk)
+    return render(request, 'teachers/class.html', {'subjects': subjects, 'students': student})
+
+
+def class_card(request, pk):
+    if pk:
+        user_student = Student.objects.filter(id=pk)
+        if user_student:
+            user_student = user_student[0]
+            subjects = list()
+            first_year = MarkType.objects.get(pk=3)
+            second_year = MarkType.objects.get(pk=5)
+            all_year = MarkType.objects.get(pk=4)
+            first = list()
+            for mark in Mark.objects.filter(type=first_year, student=user_student):
+                first.append(mark)
+            second = list()
+            for mark in Mark.objects.filter(type=second_year, student=user_student):
+                second.append(mark)
+            year = list()
+            for mark in Mark.objects.filter(type=all_year, student=user_student):
+                year.append(mark)
+            class_subjects = ClassSubjects.objects.get(class_num=user_student.journal_id.class_num)
+            for subject in class_subjects.subjects.all():
+                subjects.append(subject)
+            data = {'first': first,
+                    'second': second,
+                    'year': year,
+                    'student': Student.objects.get(pk=user_student.pk),
+                    'subjects': list(subjects)}
+            return render(request, 'teachers/class_card.html', data)
+        messages.error(request, 'Нема такого учня!')
+        return redirect('/teachers/')
+
+
+def class_subject(request, pk):
+    if pk:
+        context = {'form': ""}
+        class_teacher = ClassTeacher.objects.get(id=pk)
+        topics = []
+        topic_list = []
+        for i in Topic.objects.filter(class_teacher=class_teacher):
+            topic_list.append(i.id)
+            topics.append(i)
+        if topic_list:
+            topic_list = max(topic_list)
+        else:
+            topic_list = 1
+        page = request.GET.get('topic') or topic_list
+        topic = Topic.objects.filter(pk=int(page))
+        if topic:
+            topic = topic[0]
+            dates = set()
+            heads = set()
+            marks_not_clear = Mark.objects.filter(teacher=class_teacher,
+                                                  subject=class_teacher.subject_id,
+                                                  topic=topic)
+            print_tf = False
+            for mark in marks_not_clear:
+                print_tf = True
+                if mark.type != MarkType.objects.get(pk=1):
+                    dates.add(mark.date)
+                    heads.add(mark.date.strftime("%d.%m.%y"))
+            dates = sorted(dates)
+            heads = sorted(heads)
+            if topic.finish:
+                heads.append('Тематична')
+            elif now.strftime("%d.%m.%y") not in heads:
+                heads.append('Сьогодні')
+            context.update({'students': Student.objects.filter(
+                journal_id=class_teacher.journal_id.id),
+                'dates': dates, 'topics': topics, 'page': topic,
+                'class_teacher': class_teacher, 'heads': heads,
+                'print': print_tf
+            })
+        else:
+            context.update({'topics': topics, 'class_teacher': class_teacher,
+                            'print': False})
+        return render(request, 'teachers/class_subject.html', context)

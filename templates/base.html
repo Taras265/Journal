@@ -1,5 +1,6 @@
 <!doctype html>
 {% load static %}
+{% load basetags %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -27,6 +28,11 @@
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="/">Додому</a>
                 </li>
+                {% if user|class_teacher %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'teachers:my_class' %}">Мій клас</a>
+                  </li>
+                {% endif %}
                 {% if user.is_authenticated%}
                   <li class="nav-item">
                     <a class="nav-link" href="{% url 'accounts:logout' %}">Вийти</a>
