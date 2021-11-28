@@ -36,12 +36,6 @@
             </div>
     {% endif %}
     {% endif %}
-            <div class="col">
-    <form method="post" action="add/topic/"> {% csrf_token %}
-          <input type="hidden" name="class_teacher" value="{{ class_teacher.id }}">
-          <button type="submit" class="btn btn-primary">Нова тема</button>
-    </form>
-            </div>
     {% if topics %}
     <br>
     </div>
