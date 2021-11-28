@@ -3,7 +3,7 @@
 
 {% block content %}
 {% if request.user|teacher %}
-    <h1>Журнал {{page.class_teacher.journal_id}}</h1>
+    <h1>{{page.class_teacher.subject_id}}</h1>
     <br>
     {% if topics %}
     <div class="accordion" id="accordionPanelsStayOpenExample">

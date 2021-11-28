@@ -338,7 +338,7 @@ def class_card(request, pk):
                     'second': second,
                     'year': year,
                     'student': Student.objects.get(pk=user_student.pk),
-                    'subjects': list(subjects)}
+                    'subjects': list(subjects),}
             return render(request, 'teachers/class_card.html', data)
         messages.error(request, 'Нема такого учня!')
         return redirect('/teachers/')
