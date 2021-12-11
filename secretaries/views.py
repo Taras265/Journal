@@ -222,13 +222,7 @@ class JournalListView(LoginRequiredMixin, ListView):
 @login_required()
 def class_teacher_list(request):
     qs = ClassTeacher.objects.all()
-    data = []
-    classes = []
-    for q in qs:
-        if str(q.journal_id) not in classes:
-            data.append(q)
-            classes.append(str(q.journal_id))
-    context = {'class_teachers': data}
+    context = {'class_teachers': qs}
     return render(request, 'secretaries/class_teacher_list.html', context)
 
 
