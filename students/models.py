@@ -34,6 +34,7 @@ class Student(models.Model):
                                    related_name='user_id_set', verbose_name='Індефікатор')
     journal_id = models.ForeignKey(SchoolJournal, unique=False, on_delete=models.CASCADE,
                                    related_name='journal_id_set', verbose_name='Журнал')
+    group = models.CharField(choices=(("1", "1 група"), ("2", "2 група")), max_length=50)
 
     def __str__(self):
         return self.so_name + ' ' + self.name

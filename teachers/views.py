@@ -90,12 +90,15 @@ def journal_detail(request, pk=None):
                 heads.append('Тематична')
             elif now.strftime("%d.%m.%y") not in heads:
                 heads.append('Сьогодні')
-            context.update({'students': Student.objects.filter(
-                journal_id=class_teacher.journal_id.id),
-                'dates': dates, 'topics': topics, 'page': topic,
-                'class_teacher': class_teacher, 'heads': heads,
-                'print': print_tf
-            })
+            if class_teacher.group:
+                students = Student.objects.filter(journal_id=class_teacher.journal_id.id, group=class_teacher.group)
+            else:
+                students = Student.objects.filter(journal_id=class_teacher.journal_id.id)
+            context.update({'students': students,
+                            'dates': dates, 'topics': topics, 'page': topic,
+                            'class_teacher': class_teacher, 'heads': heads,
+                            'print': print_tf
+                            })
         else:
             context.update({'topics': topics, 'class_teacher': class_teacher,
                             'print': False})
@@ -179,7 +182,12 @@ def topical_mark_add(request, pk=None):
             data_form['subject'] = Subject.objects.get(pk=data_form['subject'])
             data_form['topic'] = Topic.objects.get(pk=data_form['topic'])
             data_form['type'] = MarkType.objects.get(pk=1)
-            for student in Student.objects.filter(journal_id=data_form['teacher'].journal_id):
+            class_teacher = ClassTeacher.objects.get(id=pk)
+            if class_teacher.group:
+                students = Student.objects.filter(journal_id=class_teacher.journal_id.id, group=class_teacher.group)
+            else:
+                students = Student.objects.filter(journal_id=class_teacher.journal_id.id)
+            for student in students:
                 mark_sum = 0
                 data_form['student'] = student
                 for mark in Mark.objects.filter(student=student.id,
@@ -187,14 +195,14 @@ def topical_mark_add(request, pk=None):
                     mark_sum += int(mark.mark)
                 if mark_sum != 0:
                     data_form['mark'] = ceil(mark_sum / len(list(Mark.objects.filter(student=student.id,
-                                                                                    topic=data_form['topic']))))
+                                                                                     topic=data_form['topic']))))
                 else:
                     data_form['mark'] = 0
                 if not Topic.objects.get(id=data_form['topic'].id).finish:
                     mark_form = AddMark(data_form)
                     mark_form.save()
                     messages.success(request, "Тематична оцінка збережена!")
-            Topic.objects.filter(topic=data_form['topic'].topic).update(finish=data_form['date'])
+            Topic.objects.filter(id=data_form['topic'].id).update(finish=data_form['date'])
         return redirect('/teachers/journal/' + str(pk) + '/')
 
 
@@ -212,11 +220,15 @@ def card(request, pk=None):
             semester = False
         else:
             semester = True
+        if class_teacher.group:
+            students = Student.objects.filter(journal_id=class_teacher.journal_id.id, group=class_teacher.group)
+        else:
+            students = Student.objects.filter(journal_id=class_teacher.journal_id.id)
         data = {'first': list(Mark.objects.filter(type=first_year, teacher=pk)),
                 'second': Mark.objects.filter(type=second_year, teacher=pk),
                 'year': Mark.objects.filter(type=year, teacher=pk),
                 'class_teacher': class_teacher,
-                'students': Student.objects.filter(journal_id=class_teacher.journal_id.id),
+                'students': students,
                 'semester': semester}
         return render(request, 'teachers/card.html', data)
 
@@ -234,8 +246,11 @@ def add_semester(request, pk=None):
                     'subject': teacher.subject_id,
                     'type': MarkType.objects.get(pk=int(request.POST.copy()['semester'][0]))
                 }
-                for student in Student.objects.filter(
-                        journal_id=ClassTeacher.objects.get(pk=pk).journal_id):
+                if teacher.group:
+                    students = Student.objects.filter(journal_id=teacher.journal_id.id, group=teacher.group)
+                else:
+                    students = Student.objects.filter(journal_id=teacher.journal_id.id)
+                for student in students:
                     if len(list(Mark.objects.filter(
                             student=student,
                             type=MarkType.objects.get(pk=1),
@@ -308,8 +323,8 @@ def my_class(request):
         ct = ClassTeacher.objects.filter(journal_id=journal.id, subject_id=subject.id)
         if ct:
             subjects.append(ct[0])
-    student = list(Student.objects.filter(journal_id=class_teacher.journal_id.id))
-    print(subjects[0].pk)
+    students = Student.objects.filter(journal_id=class_teacher.journal_id.id)
+    student = list(students)
     return render(request, 'teachers/class.html', {'subjects': subjects, 'students': student})
 
 
@@ -338,7 +353,7 @@ def class_card(request, pk):
                     'second': second,
                     'year': year,
                     'student': Student.objects.get(pk=user_student.pk),
-                    'subjects': list(subjects),}
+                    'subjects': list(subjects), }
             return render(request, 'teachers/class_card.html', data)
         messages.error(request, 'Нема такого учня!')
         return redirect('/teachers/')
@@ -378,8 +393,8 @@ def class_subject(request, pk):
                 heads.append('Тематична')
             elif now.strftime("%d.%m.%y") not in heads:
                 heads.append('Сьогодні')
-            context.update({'students': Student.objects.filter(
-                journal_id=class_teacher.journal_id.id),
+            students = Student.objects.filter(journal_id=class_teacher.journal_id.id)
+            context.update({'students': students,
                 'dates': dates, 'topics': topics, 'page': topic,
                 'class_teacher': class_teacher, 'heads': heads,
                 'print': print_tf

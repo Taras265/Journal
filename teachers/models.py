@@ -28,6 +28,7 @@ class Teacher(models.Model):
 class Subject(models.Model):
     name = models.CharField(max_length=50, unique=True,
                             verbose_name='Предмет')
+    group = models.BooleanField(verbose_name="Ділеться на групи")
 
     def __str__(self):
         return self.name
@@ -58,6 +59,7 @@ class ClassTeacher(models.Model):
                                    related_name='class_teacher_journal', verbose_name='Журнал')
     teacher_id = models.ForeignKey(TeacherSubjects, on_delete=models.CASCADE,
                                    related_name='class_teacher', verbose_name='Вчитель')
+    group = models.CharField(choices=(("1", "1 група"), ("2", "2 група")), null=True, blank=True, max_length=50)
 
     def __str__(self):
         return self.teacher_id.teacher_id.so_name + ' ' + \

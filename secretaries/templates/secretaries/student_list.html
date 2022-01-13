@@ -29,6 +29,7 @@
                       <th scope="col">Дата народження</th>
                       <th scope="col">Адреса</th>
                       <th scope="col">Журнал</th>
+                      <th scope="col">Група</th>
                       <th scope="col"></th>
                       <th scope="col"></th>
                       <th scope="col"></th>
@@ -56,6 +57,7 @@
                             {{ object.address }}
                         </td>
                         <td>{{ object.journal_id }}</td>
+                          <td>{{ object.group }} група</td>
                           <td>
                               <a href="{% url 'secretaries:refactor_student' pk=object.pk %}">
                                 <button type="submit" class="btn btn-primary">Редагувати інформацію</button>
@@ -94,6 +96,7 @@
                       <th scope="col">Дата народження</th>
                       <th scope="col">Адреса</th>
                       <th scope="col">Журнал</th>
+                      <th scope="col">Група</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -118,6 +121,7 @@
                             {{ object.address }}
                         </td>
                         <td>{{ object.journal_id }}</td>
+                          <td>{{ object.group }} група</td>
                       </tr>
                     {% endfor %}
                 </tbody>

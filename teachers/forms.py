@@ -10,10 +10,11 @@ group = Group.objects.get(name='Вчитель')
 class SubjectForm(forms.ModelForm):
     name = forms.CharField(label='Предмет', widget=forms.TextInput(attrs={'class': 'form-control',
                                                                           'placeholder': 'Предмет'}))
+    group = forms.BooleanField(label="Предмет ділиться на групи?")
 
     class Meta:
         model = Subject
-        fields = ('name',)
+        fields = ('name', 'group')
 
 
 class TeacherForm(forms.ModelForm):
@@ -72,17 +73,25 @@ class ClassTeacherForm(forms.ModelForm):
     teacher_id = forms.ModelChoiceField(label='Вчитель', queryset=TeacherSubjects.objects.all(),
                                         widget=forms.Select(attrs={'class': 'form-control',
                                                                    'placeholder': 'Вчитель'}))
+    group = forms.ChoiceField(required=False, choices=((None, "Основний вчитель"), ("1", "1 група"), ("2", "2 група")),
+                              label='Група',
+                              widget=forms.Select(attrs={'class': 'form-control',
+                                                         'placeholder': 'Група'}))
 
     def clean(self):
         cleaned_data = super().clean()
         subject_id = self.cleaned_data.get("subject_id")
         journal_id = self.cleaned_data.get("journal_id")
         teacher_id = self.cleaned_data.get("teacher_id")
+        gr = self.cleaned_data.get("group")
         if not ClassSubjects.objects.filter(class_num=journal_id.class_num):
             raise forms.ValidationError('Ви не додали предмети цієЇ паралелі!')
         class_subjects = ClassSubjects.objects.get(class_num=journal_id.class_num)
-        if ClassTeacher.objects.filter(journal_id=journal_id, subject_id=subject_id):
-            raise forms.ValidationError('Вже є такий вчитель у класі!')
+        print(gr)
+        if subject_id.group and not gr:
+            raise forms.ValidationError('Ви не можете поставити основного вчителя предмету, який має групи!')
+        if not subject_id.group and gr:
+            raise forms.ValidationError('Ви не можете поставити вчителя групи для предмета, який не має груп!')
         if not list(class_subjects.subjects.filter(name=str(subject_id))):
             raise forms.ValidationError('Предмет не вірен!')
         if not list(teacher_id.subjects.filter(name=subject_id.name)):
@@ -113,7 +122,7 @@ class AddMark(forms.ModelForm):
 
 class AddMarkBy(forms.ModelForm):
     date = forms.DateField(label='Дата', widget=forms.DateInput(attrs=
-                                                  {'class': 'form-control'}))
+                                                                {'class': 'form-control'}))
     student = forms.ModelChoiceField(label='Учень', queryset=Student.objects.all(),
                                      widget=forms.Select(attrs=
                                                          {'class': 'form-control'}))

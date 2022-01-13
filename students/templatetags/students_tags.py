@@ -25,7 +25,6 @@ def mark_filter(date, student):
 @register.simple_tag
 def get_simple_mark(date, student, topic):
     simple_mark = MarkType.objects.get(pk=2)
-    print(Mark.objects.filter(student=student.id, date=date, type=simple_mark, topic=topic))
     mark = Mark.objects.get(student=student.id, date=date, type=simple_mark, topic=topic)
     return mark.mark
 
@@ -38,6 +37,9 @@ def form(data):
 @register.filter
 def topical_mark(topic, student):
     type_mark = MarkType.objects.get(pk=1)
+    mark = Mark.objects.get(student=student.id, topic=topic, type=type_mark).mark
+    if mark <= 0:
+        return "НЗ"
     return Mark.objects.get(student=student.id, topic=topic, type=type_mark).mark
 
 

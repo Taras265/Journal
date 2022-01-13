@@ -26,6 +26,9 @@ class StudentForm(forms.ModelForm):
                                                                                   'placeholder': 'Дата народження'}))
     address = forms.CharField(label='Адреса', widget=forms.TextInput(attrs={'class': 'form-control',
                                                                             'placeholder': 'Адреса'}))
+    group = forms.ChoiceField(choices=(("1", "1 група"), ("2", "2 група")), label='Група',
+                              widget=forms.Select(attrs={'class': 'form-control',
+                                                            'placeholder': 'Група'}))
 
     class Meta:
         model = Student

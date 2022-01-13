@@ -28,13 +28,18 @@ def journal_detail(request, pk=None):
         user_student = Student.objects.get(user_id=user)
         context = {}
         subject = Subject.objects.get(pk=pk)
-        if not ClassTeacher.objects.filter(subject_id=subject,
-                                                     journal_id=user_student.journal_id):
+        if len(ClassTeacher.objects.filter(subject_id=subject,
+                                           journal_id=user_student.journal_id)) >= 2:
+            class_teacher = ClassTeacher.objects.filter(subject_id=subject,
+                                                        journal_id=user_student.journal_id, group=user_student.group)
+        else:
+            class_teacher = ClassTeacher.objects.filter(subject_id=subject,
+                                                        journal_id=user_student.journal_id)
+        if not class_teacher:
             messages.error(request, 'Ще немає вчителя цього предмету!')
             return redirect('/students')
         else:
-            class_teacher = ClassTeacher.objects.get(subject_id=subject,
-                                                     journal_id=user_student.journal_id)
+            class_teacher = class_teacher[0]
             topics = []
             topic_list = []
             for i in Topic.objects.filter(class_teacher=class_teacher):
@@ -53,13 +58,18 @@ def journal_detail(request, pk=None):
                                                       subject=class_teacher.subject_id,
                                                       topic=topic,
                                                       student=user_student)
+                if marks_not_clear:
+                    table = True
+                else:
+                    table = False
                 for mark in marks_not_clear:
                     if mark.type != MarkType.objects.get(pk=1):
                         dates.add(mark.date)
                 dates = sorted(dates)
                 context.update({'dates': dates, 'topics': topics, 'page': topic,
                                 'class_teacher': class_teacher,
-                                'student': user_student})
+                                'student': user_student,
+                                'table': table})
             else:
                 context.update({'topics': topics, 'class_teacher': class_teacher,
                                 'student': user_student})
