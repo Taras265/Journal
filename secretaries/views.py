@@ -1,6 +1,8 @@
 import random
 
+import pandas
 from django.contrib import messages
+from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User, Group
@@ -320,3 +322,37 @@ class DeleteClassTeacherView(LoginRequiredMixin, SuccessMessageMixin, DeleteView
     success_url = reverse_lazy('secretaries:home')
     template_name = 'secretaries/delete.html'
     success_message = 'Вчителя классу видалено!'
+
+
+def load_students(request):
+    if request.method == 'POST':
+        data = dict(request.FILES)
+        if 'file' in data:
+            try:
+                data = pandas.read_excel(data['file'][0])
+                for i in range(0, data['ID'].iloc[-1]):
+                    form = UserRegistrationForm({'username': data['Login'].iloc[i],
+                                                 'password': data['Password'].iloc[i],
+                                                 'password2': data['Password'].iloc[i],
+                                                 'email': data['Email'].iloc[i]})
+                    new_user = form.save(commit=False)
+                    new_user.set_password(form.cleaned_data['password'])
+                    new_user.save()
+                    group = Group.objects.get(name='Учень')
+                    group.user_set.add(new_user)
+                    user = User.objects.get(username=data['Login'].iloc[-1])
+                    journal = SchoolJournal.objects.get(class_num=int(data['Journal'].iloc[i][0]),
+                                                        class_letter=data['Journal'].iloc[i][1])
+                    info = StudentForm({'user_id': user, 'journal_id': journal,
+                                        'name': data['Name'].iloc[i],
+                                        'so_name': data['Surname'].iloc[i],
+                                        'second_name': data['Second name'].iloc[i],
+                                        'date': data['Date'].iloc[i],
+                                        'address': data['Address'].iloc[i],
+                                        'group': data['Group'].iloc[i]})
+                    info.save()
+                messages.success(request, 'Учні додані!')
+            except:
+                messages.error(request, 'Помилка! Перевірте таблицю! Данні збереженні до '+ str(i) + ' ID!')
+            return redirect('/secretaries/')
+    return render(request, 'secretaries/load.html')

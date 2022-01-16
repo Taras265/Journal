@@ -1,11 +1,11 @@
 from django.urls import path
-from secretaries.views import home, add_teacher, TeacherInfoCreateView, TeacherSubjectsCreateView,\
-    teacher_info_list, DeleteUserView, RefactorTeacherInfoView, RefactorTeacherSubjectsView,\
-    SubjectCreateView, SubjectListView, RefactorSubjectView, DeleteSubjectView, add_student,\
-    StudentInfoCreateView, JournalCreateView, student_info_list, JournalListView,\
-    RefactorStudentInfoView, RefactorJournalView, DeleteJournalView, ClassSubjectsCreateView,\
-    ClassSubjectsListView, RefactorClassSubjectsView, DeleteClassSubjectsView,\
-    ClassTeacherCreateView, class_teacher_list, RefactorClassTeacherView, DeleteClassTeacherView
+from secretaries.views import home, add_teacher, TeacherInfoCreateView, TeacherSubjectsCreateView, \
+    teacher_info_list, DeleteUserView, RefactorTeacherInfoView, RefactorTeacherSubjectsView, \
+    SubjectCreateView, SubjectListView, RefactorSubjectView, DeleteSubjectView, add_student, \
+    StudentInfoCreateView, JournalCreateView, student_info_list, JournalListView, \
+    RefactorStudentInfoView, RefactorJournalView, DeleteJournalView, ClassSubjectsCreateView, \
+    ClassSubjectsListView, RefactorClassSubjectsView, DeleteClassSubjectsView, \
+    ClassTeacherCreateView, class_teacher_list, RefactorClassTeacherView, DeleteClassTeacherView, load_students
 
 urlpatterns = [
     path('', home, name='home'),
@@ -41,4 +41,5 @@ urlpatterns = [
          name='refactor_teacher_class'),
     path('delete/teachers_class/<int:pk>/', DeleteClassTeacherView.as_view(),
          name='delete_class_teacher'),
+    path('load/students/', load_students, name='load_student'),
 ]
