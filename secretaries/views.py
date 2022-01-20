@@ -353,6 +353,6 @@ def load_students(request):
                     info.save()
                 messages.success(request, 'Учні додані!')
             except:
-                messages.error(request, 'Помилка! Перевірте таблицю! Данні збереженні до '+ str(i) + ' ID!')
+                messages.error(request, 'Помилка! Перевірте таблицю! Данні збереженні до '+str(i) + ' ID!')
             return redirect('/secretaries/')
     return render(request, 'secretaries/load.html')
