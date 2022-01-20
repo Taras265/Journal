@@ -6,11 +6,11 @@
 <h1>Загрузка данних</h1>
     <div class="row">
         <div class="col-md-4">
-            <p><a href="/media/Шаблон%20ученика.xlsx" download>Скачать шаблон</a></p>
             <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
-                <input name="file" type="file" accept=".xlsx">
+                <input name="file" class="form-control" type="file" accept=".xlsx">
                 <br>
                 <button type="submit" class="btn btn-primary">Загрузити файл</button>
+                <a class="btn btn-primary" href="/secretaries/students/table">Посмотрель шаблон</a>
             </form>
         </div>
     </div>

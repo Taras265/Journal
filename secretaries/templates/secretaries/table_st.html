@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load secretaries_tags %}
+
+{% block content %}
+{% if request.user|secretary %}
+<h1>Шаблон учеников</h1>
+    <div class="row">
+        <div class="col-md-4">
+                        <table class="table table-striped">
+                <thead>
+                  <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Login</th>
+                      <th scope="col">Password</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Surname</th>
+                      <th scope="col">Second name</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Address</th>
+                      <th scope="col">Journal</th>
+                      <th scope="col">Group</th>
+                  </tr>
+                </thead>
+                <tbody>
+                      <tr>
+                          <th scope="row">
+                            1
+                          </th>
+                        <td>
+                            Учень5
+                        </td>
+                        <td>
+                            1йфя2цыч3увс
+                        </td>
+                        <td>
+                            taras.byalyk@gmail.com
+                        </td>
+                        <td>
+                            Нікіта
+                        </td>
+                        <td>
+                            Сагінов
+                        </td>
+                        <td>Ігорович</td>
+                          <td>16.01.2007</td>
+                          <td>
+                            Таирова 42/3
+                          </td>
+                          <td>
+                            9б
+                          </td>
+                          <td>
+                            2
+                          </td>
+                      </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+{% else %}
+    {% include '403.html' %}
+{% endif %}
+{% endblock %}

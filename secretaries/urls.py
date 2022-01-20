@@ -5,7 +5,8 @@ from secretaries.views import home, add_teacher, TeacherInfoCreateView, TeacherS
     StudentInfoCreateView, JournalCreateView, student_info_list, JournalListView, \
     RefactorStudentInfoView, RefactorJournalView, DeleteJournalView, ClassSubjectsCreateView, \
     ClassSubjectsListView, RefactorClassSubjectsView, DeleteClassSubjectsView, \
-    ClassTeacherCreateView, class_teacher_list, RefactorClassTeacherView, DeleteClassTeacherView, load_students
+    ClassTeacherCreateView, class_teacher_list, RefactorClassTeacherView, DeleteClassTeacherView, load_students, \
+    students_table
 
 urlpatterns = [
     path('', home, name='home'),
@@ -42,4 +43,5 @@ urlpatterns = [
     path('delete/teachers_class/<int:pk>/', DeleteClassTeacherView.as_view(),
          name='delete_class_teacher'),
     path('load/students/', load_students, name='load_student'),
+    path('students/table/', students_table, name='students_table')
 ]

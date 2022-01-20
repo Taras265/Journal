@@ -356,3 +356,7 @@ def load_students(request):
                 messages.error(request, 'Помилка! Перевірте таблицю! Данні збереженні до '+str(i) + ' ID!')
             return redirect('/secretaries/')
     return render(request, 'secretaries/load.html')
+
+
+def students_table(request):
+    return render(request, 'secretaries/table_st.html')
