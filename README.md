@@ -24,3 +24,5 @@ This cite has got 3 head permission:
 
 ![Marks](https://raw.githubusercontent.com/Taras265/Journal/main/img/img_9.png)
 ![Card](https://raw.githubusercontent.com/Taras265/Journal/main/img/img_10.png)
+
+You can test this project by next url: https://journal-for-school.herokuapp.com
